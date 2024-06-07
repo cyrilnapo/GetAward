@@ -1,0 +1,19 @@
+{
+  "name": "mon_application",
+  "version": "1.0.0",
+  "description": "Une application Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js -L"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "crypto": "^1.0.1",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "mysql2": "^3.10.0",
+    "nodemon": "^3.1.0"
+  }
+}
