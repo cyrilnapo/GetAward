@@ -1,0 +1,132 @@
+* {
+  transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+.contact-form {
+  background-color: #1e1e24;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+  width: 600px;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group span {
+  color: red;
+}
+
+.name-fields {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.name-fields input {
+  width: 48%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #2c2c34;
+  color: white;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e91e63;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+.icon-bar {
+  font-size: 1.5em;
+  display: flex;
+  gap: 4em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 0;
+  margin: 0 3%;
+}
+
+.nav-contain {
+  display: flex;
+  align-items: center;
+  gap: 15em;
+}
+
+.bouton-container {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  gap: 3em;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.bouton2 {
+  background-color: #ab96ff;
+  border: solid 3px #ab96ff;
+  color: white;
+  border-radius: 10px;
+  padding: 0.3em 1em;
+}
+
+.bouton2:hover {
+  opacity: 0.7;
+  transform: scale(0.9);
+}
+
+.bouton3:hover {
+  opacity: 0.7;
+  transform: scale(0.9);
+}
+
+nav a:hover {
+  transform: scale(1.2);
+}
