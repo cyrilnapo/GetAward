@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue from '@vitejs/plugin-vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import TaskManager from '../views/TaskManager.vue'
