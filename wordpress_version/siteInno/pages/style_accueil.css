@@ -93,7 +93,7 @@ nav a:hover {
 .agenda {
   width: 95%;
   height: 75vh;
-  background-image: url(img/agenda.webp);
+  background-image: url(../images/agenda.webp);
   background-size: cover;
 }
 .agenda-contain {
