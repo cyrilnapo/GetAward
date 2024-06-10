@@ -1,7 +1,7 @@
 
   
   .dark-mode {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
   }
 
@@ -15,11 +15,7 @@ body
        color: black;
        font-size: 25px;
 }
-header
-{
-    background-color: rgb(255, 255, 255);
-     
-}
+
 h1
 {
     
@@ -93,12 +89,13 @@ h3
     padding: 0.3em 1em;
   }
   .bouton1:hover {
-    background-color: #ab96ff9c;
+    background-color: #ab96ffcb;
     transform: scale(0.9);
   }
   .bouton2:hover {
     opacity: 0.7;
     transform: scale(0.9);
+   
   }
   .bouton3:hover {
     opacity: 0.7;
