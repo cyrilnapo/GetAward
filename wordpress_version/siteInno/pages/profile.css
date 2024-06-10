@@ -27,20 +27,28 @@ h2
 {
     
     text-align: center;
-    font-size: 2em ;
+    font-size: 3em ;
 }
 .card
 {
     border-radius: 100px;
    display: flex;
-    justify-content: center;
-    
-
+   justify-content: center;
+}
+#menu
+{
+  display: flex;
+  
 }
 .imge
 {
     border-radius: 100%;
     width: 30%;
+    justify-content: center;
+}
+.imge:hover
+{
+opacity: 0.7;
 }
 h3
 {
@@ -115,7 +123,7 @@ h3
   }
   p
   {
-    font-size: 5em;
+    font-size: 2em;
   }
   .info
   {
@@ -128,3 +136,62 @@ h3
   margin-bottom: 20px;
 }
 
+
+
+.menu_wrapper{
+  background-color: rgb(182, 154, 247);
+  
+  height: 415px;
+  width: 90px;
+  
+  padding: 0;
+  justify-content: center;
+  border-radius: 40px;
+  pointer-events: none;
+  transition: 0.2s;
+}
+.menu_wrapper li {
+  width: 90px ;
+  height: 85px;
+  border-radius: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+  pointer-events: auto;
+
+}
+.menu_wrapper li a i{
+  font-size: 32px;
+  color: #63cee9;
+  display: inline-block;
+  transition: 0.8s;
+  border-radius: 18px;
+}
+.menu_wrapper li :hover{
+  background-color: #313131;
+  transform: translateY(-5px);
+  border-radius: 100px;
+}
+.menu_wrapper li :hover a i{
+  color: rgb(77, 189, 209);
+  transform: scale(0.5);
+}
+.menu_wrapper:hover{
+  background-color: darkblue;
+}
+a {
+    
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 20px 0px;
+}
+a,.dropbtn {
+    
+  color: rgb(222, 224, 230);
+  text-align: right;
+  padding: 49px 49px;
+  text-decoration: none;
+}
