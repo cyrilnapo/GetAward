@@ -32,25 +32,243 @@
           <h2>Inscription</h2>
           <form>
             <div class="form-group">
-              <label for="firstname">Nom Complet <span>*</span></label>
+              <label>Nom Complet <span>*</span></label>
               <div class="name-fields">
-                <input type="text" name="firstname" placeholder="Prénom" required>
-                <input type="text" name="lastname" placeholder="Nom" required>
+                <div class="input-container">
+                  <input type="text" id="firstname" name="firstname" placeholder="Prénom" required>
+                </div>
+                <div class="input-container">
+                  <input type="text" id="lastname" name="lastname" placeholder="Nom" required>
+                </div>
               </div>
             </div>
             <div class="form-group">
               <label for="email">Email <span>*</span></label>
-              <input type="email" placeholder="exemple@gmail.com" name="email" required>
+              <input type="email" id="email" placeholder="exemple@gmail.com" name="email" required>
             </div>
             <div class="form-group">
               <label for="password">Mot de passe <span>*</span></label>
-              <input type="password" placeholder="********" name="password" required>
+              <input type="password" id="password" placeholder="********" name="password" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <div class="phone-container">
+                <input type="tel" id="phone" name="phone" required placeholder="Numéro de téléphone">
+                <div class="dropdown">
+                  <button type="button" onclick="toggleDropdown()" class="dropbtn">Sélectionnez le code pays</button>
+                  <div id="myDropdown" class="dropdown-content">
+                      <a href="#" onclick="setPhoneCode('')">NULL</a>
+                      <a href="#" onclick="setPhoneCode('+93 ')">Afghanistan +93</a>
+                      <a href="#" onclick="setPhoneCode('+27 ')">Afrique du Sud +27</a>
+                      <a href="#" onclick="setPhoneCode('+355 ')">Albanie +355</a>
+                      <a href="#" onclick="setPhoneCode('+213 ')">Algérie +213</a>
+                      <a href="#" onclick="setPhoneCode('+49 ')">Allemagne +49</a>
+                      <a href="#" onclick="setPhoneCode('+376 ')">Andorre +376</a>
+                      <a href="#" onclick="setPhoneCode('+244 ')">Angola +244</a>
+                      <a href="#" onclick="setPhoneCode('+1-268 ')">Antigua-et-Barbuda +1-268</a>
+                      <a href="#" onclick="setPhoneCode('+966 ')">Arabie saoudite +966</a>
+                      <a href="#" onclick="setPhoneCode('+54 ')">Argentine +54</a>
+                      <a href="#" onclick="setPhoneCode('+374 ')">Arménie +374</a>
+                      <a href="#" onclick="setPhoneCode('+61')">Australie +61</a>
+                      <a href="#" onclick="setPhoneCode('+43 ')">Autriche +43</a>
+                      <a href="#" onclick="setPhoneCode('+994 ')">Azerbaïdjan +994</a>
+                      <a href="#" onclick="setPhoneCode('+1-242 ')">Bahamas +1-242</a>
+                      <a href="#" onclick="setPhoneCode('+973 ')">Bahreïn +973</a>
+                      <a href="#" onclick="setPhoneCode('+880 ')">Bangladesh +880</a>
+                      <a href="#" onclick="setPhoneCode('+1-246 ')">Barbade +1-246</a>
+                      <a href="#" onclick="setPhoneCode('+32 ')">Belgique +32</a>
+                      <a href="#" onclick="setPhoneCode('+501 ')">Belize +501</a>
+                      <a href="#" onclick="setPhoneCode('+229 ')">Bénin +229</a>
+                      <a href="#" onclick="setPhoneCode('+975 ')">Bhoutan +975</a>
+                      <a href="#" onclick="setPhoneCode('+375 ')">Biélorussie +375</a>
+                      <a href="#" onclick="setPhoneCode('+95 ')">Birmanie (Myanmar) +95</a>
+                      <a href="#" onclick="setPhoneCode('+591 ')">Bolivie +591</a>
+                      <a href="#" onclick="setPhoneCode('+387 ')">Bosnie-Herzégovine +387</a>
+                      <a href="#" onclick="setPhoneCode('+267 ')">Botswana +267</a>
+                      <a href="#" onclick="setPhoneCode('+55 ')">Brésil +55</a>
+                      <a href="#" onclick="setPhoneCode('+673 ')">Brunei +673</a>
+                      <a href="#" onclick="setPhoneCode('+359 ')">Bulgarie +359</a>
+                      <a href="#" onclick="setPhoneCode('+226 ')">Burkina Faso +226</a>
+                      <a href="#" onclick="setPhoneCode('+257 ')">Burundi +257</a>
+                      <a href="#" onclick="setPhoneCode('+855 ')">Cambodge +855</a>
+                      <a href="#" onclick="setPhoneCode('+237 ')">Cameroun +237</a>
+                      <a href="#" onclick="setPhoneCode('+1 ')">Canada +1</a>
+                      <a href="#" onclick="setPhoneCode('+238 ')">Cap-Vert +238</a>
+                      <a href="#" onclick="setPhoneCode('+56 ')">Chili +56</a>
+                      <a href="#" onclick="setPhoneCode('+86 ')">Chine +86</a>
+                      <a href="#" onclick="setPhoneCode('+357 ')">Chypre +357</a>
+                      <a href="#" onclick="setPhoneCode('+57 ')">Colombie +57</a>
+                      <a href="#" onclick="setPhoneCode('+269 ')">Comores +269</a>
+                      <a href="#" onclick="setPhoneCode('+242 ')">Congo-Brazzaville +242</a>
+                      <a href="#" onclick="setPhoneCode('+243 ')">Congo-Kinshasa +243</a>
+                      <a href="#" onclick="setPhoneCode('+850 ')">Corée du Nord +850</a>
+                      <a href="#" onclick="setPhoneCode('+82 ')">Corée du Sud +82</a>
+                      <a href="#" onclick="setPhoneCode('+506 ')">Costa Rica +506</a>
+                      <a href="#" onclick="setPhoneCode('+225 ')">Côte d'Ivoire +225</a>
+                      <a href="#" onclick="setPhoneCode('+385 ')">Croatie +385</a>
+                      <a href="#" onclick="setPhoneCode('+53 ')">Cuba +53</a>
+                      <a href="#" onclick="setPhoneCode('+45 ')">Danemark +45</a>
+                      <a href="#" onclick="setPhoneCode('+253 ')">Djibouti +253</a>
+                      <a href="#" onclick="setPhoneCode('+1-767 ')">Dominique +1-767</a>
+                      <a href="#" onclick="setPhoneCode('+20 ')">Égypte +20</a>
+                      <a href="#" onclick="setPhoneCode('+971 ')">Émirats arabes unis +971</a>
+                      <a href="#" onclick="setPhoneCode('+593 ')">Équateur +593</a>
+                      <a href="#" onclick="setPhoneCode('+291 ')">Érythrée +291</a>
+                      <a href="#" onclick="setPhoneCode('+34 ')">Espagne +34</a>
+                      <a href="#" onclick="setPhoneCode('+372 ')">Estonie +372</a>
+                      <a href="#" onclick="setPhoneCode('+1 ')">États-Unis +1</a>
+                      <a href="#" onclick="setPhoneCode('+251 ')">Éthiopie +251</a>
+                      <a href="#" onclick="setPhoneCode('+679 ')">Fidji +679</a>
+                      <a href="#" onclick="setPhoneCode('+358 ')">Finlande +358</a>
+                      <a href="#" onclick="setPhoneCode('+33 ')">France +33</a>
+                      <a href="#" onclick="setPhoneCode('+241 ')">Gabon +241</a>
+                      <a href="#" onclick="setPhoneCode('+220 ')">Gambie +220</a>
+                      <a href="#" onclick="setPhoneCode('+995 ')">Géorgie +995</a>
+                      <a href="#" onclick="setPhoneCode('+233 ')">Ghana +233</a>
+                      <a href="#" onclick="setPhoneCode('+30 ')">Grèce +30</a>
+                      <a href="#" onclick="setPhoneCode('+1-473 ')">Grenade +1-473</a>
+                      <a href="#" onclick="setPhoneCode('+502 ')">Guatemala +502</a>
+                      <a href="#" onclick="setPhoneCode('+224 ')">Guinée +224</a>
+                      <a href="#" onclick="setPhoneCode('+240 ')">Guinée équatoriale +240</a>
+                      <a href="#" onclick="setPhoneCode('+245 ')">Guinée-Bissau +245</a>
+                      <a href="#" onclick="setPhoneCode('+592 ')">Guyana +592</a>
+                      <a href="#" onclick="setPhoneCode('+509 ')">Haïti +509</a>
+                      <a href="#" onclick="setPhoneCode('+504 ')">Honduras +504</a>
+                      <a href="#" onclick="setPhoneCode('+36 ')">Hongrie +36</a>
+                      <a href="#" onclick="setPhoneCode('+682 ')">Îles Cook +682</a>
+                      <a href="#" onclick="setPhoneCode('+298 ')">Îles Féroé +298</a>
+                      <a href="#" onclick="setPhoneCode('+692 ')">Îles Marshall +692</a>
+                      <a href="#" onclick="setPhoneCode('+677 ')">Îles Salomon +677</a>
+                      <a href="#" onclick="setPhoneCode('+91 ')">Inde +91</a>
+                      <a href="#" onclick="setPhoneCode('+62 ')">Indonésie +62</a>
+                      <a href="#" onclick="setPhoneCode('+964 ')">Irak +964</a>
+                      <a href="#" onclick="setPhoneCode('+98 ')">Iran +98</a>
+                      <a href="#" onclick="setPhoneCode('+353 ')">Irlande +353</a>
+                      <a href="#" onclick="setPhoneCode('+354 ')">Islande +354</a>
+                      <a href="#" onclick="setPhoneCode('+972 ')">Israël +972</a>
+                      <a href="#" onclick="setPhoneCode('+39 ')">Italie +39</a>
+                      <a href="#" onclick="setPhoneCode('+1-876 ')">Jamaïque +1-876</a>
+                      <a href="#" onclick="setPhoneCode('+81 ')">Japon +81</a>
+                      <a href="#" onclick="setPhoneCode('+962 ')">Jordanie +962</a>
+                      <a href="#" onclick="setPhoneCode('+7 ')">Kazakhstan +7</a>
+                      <a href="#" onclick="setPhoneCode('+254 ')">Kenya +254</a>
+                      <a href="#" onclick="setPhoneCode('+996 ')">Kirghizistan +996</a>
+                      <a href="#" onclick="setPhoneCode('+686 ')">Kiribati +686</a>
+                      <a href="#" onclick="setPhoneCode('+383 ')">Kosovo +383</a>
+                      <a href="#" onclick="setPhoneCode('+965 ')">Koweït +965</a>
+                      <a href="#" onclick="setPhoneCode('+856 ')">Laos +856</a>
+                      <a href="#" onclick="setPhoneCode('+266 ')">Lesotho +266</a>
+                      <a href="#" onclick="setPhoneCode('+371 ')">Lettonie +371</a>
+                      <a href="#" onclick="setPhoneCode('+961 ')">Liban +961</a>
+                      <a href="#" onclick="setPhoneCode('+231 ')">Liberia +231</a>
+                      <a href="#" onclick="setPhoneCode('+218 ')">Libye +218</a>
+                      <a href="#" onclick="setPhoneCode('+423 ')">Liechtenstein +423</a>
+                      <a href="#" onclick="setPhoneCode('+370 ')">Lituanie +370</a>
+                      <a href="#" onclick="setPhoneCode('+352 ')">Luxembourg +352</a>
+                      <a href="#" onclick="setPhoneCode('+389 ')">Macédoine du Nord +389</a>
+                      <a href="#" onclick="setPhoneCode('+261 ')">Madagascar +261</a>
+                      <a href="#" onclick="setPhoneCode('+265 ')">Malawi +265</a>
+                      <a href="#" onclick="setPhoneCode('+960 ')">Maldives +960</a>
+                      <a href="#" onclick="setPhoneCode('+223 ')">Mali +223</a>
+                      <a href="#" onclick="setPhoneCode('+356 ')">Malte +356</a>
+                      <a href="#" onclick="setPhoneCode('+212 ')">Maroc +212</a>
+                      <a href="#" onclick="setPhoneCode('+230 ')">Maurice +230</a>
+                      <a href="#" onclick="setPhoneCode('+222 ')">Mauritanie +222</a>
+                      <a href="#" onclick="setPhoneCode('+52 ')">Mexique +52</a>
+                      <a href="#" onclick="setPhoneCode('+691 ')">Micronésie +691</a>
+                      <a href="#" onclick="setPhoneCode('+373 ')">Moldavie +373</a>
+                      <a href="#" onclick="setPhoneCode('+377 ')">Monaco +377</a>
+                      <a href="#" onclick="setPhoneCode('+976 ')">Mongolie +976</a>
+                      <a href="#" onclick="setPhoneCode('+382 ')">Monténégro +382</a>
+                      <a href="#" onclick="setPhoneCode('+258 ')">Mozambique +258</a>
+                      <a href="#" onclick="setPhoneCode('+264 ')">Namibie +264</a>
+                      <a href="#" onclick="setPhoneCode('+674 ')">Nauru +674</a>
+                      <a href="#" onclick="setPhoneCode('+977 ')">Népal +977</a>
+                      <a href="#" onclick="setPhoneCode('+505 ')">Nicaragua +505</a>
+                      <a href="#" onclick="setPhoneCode('+227 ')">Niger +227</a>
+                      <a href="#" onclick="setPhoneCode('+234 ')">Nigeria +234</a>
+                      <a href="#" onclick="setPhoneCode('+47 ')">Norvège +47</a>
+                      <a href="#" onclick="setPhoneCode('+64 ')">Nouvelle-Zélande +64</a>
+                      <a href="#" onclick="setPhoneCode('+968 ')">Oman +968</a>
+                      <a href="#" onclick="setPhoneCode('+256 ')">Ouganda +256</a>
+                      <a href="#" onclick="setPhoneCode('+998 ')">Ouzbékistan +998</a>
+                      <a href="#" onclick="setPhoneCode('+92 ')">Pakistan +92</a>
+                      <a href="#" onclick="setPhoneCode('+680 ')">Palaos +680</a>
+                      <a href="#" onclick="setPhoneCode('+970 ')">Palestine +970</a>
+                      <a href="#" onclick="setPhoneCode('+507 ')">Panama +507</a>
+                      <a href="#" onclick="setPhoneCode('+675 ')">Papouasie-Nouvelle-Guinée +675</a>
+                      <a href="#" onclick="setPhoneCode('+595 ')">Paraguay +595</a>
+                      <a href="#" onclick="setPhoneCode('+31 ')">Pays-Bas +31</a>
+                      <a href="#" onclick="setPhoneCode('+51 ')">Pérou +51</a>
+                      <a href="#" onclick="setPhoneCode('+63 ')">Philippines +63</a>
+                      <a href="#" onclick="setPhoneCode('+48 ')">Pologne +48</a>
+                      <a href="#" onclick="setPhoneCode('+351 ')">Portugal +351</a>
+                      <a href="#" onclick="setPhoneCode('+974 ')">Qatar +974</a>
+                      <a href="#" onclick="setPhoneCode('+236 ')">République centrafricaine +236</a>
+                      <a href="#" onclick="setPhoneCode('+1-809 ')">République dominicaine +1-809</a>
+                      <a href="#" onclick="setPhoneCode('+420 ')">République tchèque +420</a>
+                      <a href="#" onclick="setPhoneCode('+40 ')">Roumanie +40</a>
+                      <a href="#" onclick="setPhoneCode('+44 ')">Royaume-Uni +44</a>
+                      <a href="#" onclick="setPhoneCode('+7 ')">Russie +7</a>
+                      <a href="#" onclick="setPhoneCode('+250 ')">Rwanda +250</a>
+                      <a href="#" onclick="setPhoneCode('+1-869 ')">Saint-Kitts-et-Nevis +1-869</a>
+                      <a href="#" onclick="setPhoneCode('+1-784 ')">Saint-Vincent-et-les-Grenadines +1-784</a>
+                      <a href="#" onclick="setPhoneCode('+1-758 ')">Sainte-Lucie +1-758</a>
+                      <a href="#" onclick="setPhoneCode('+378 ')">Saint-Marin +378</a>
+                      <a href="#" onclick="setPhoneCode('+503 ')">Salvador +503</a>
+                      <a href="#" onclick="setPhoneCode('+685 ')">Samoa +685</a>
+                      <a href="#" onclick="setPhoneCode('+239 ')">Sao Tomé-et-Principe +239</a>
+                      <a href="#" onclick="setPhoneCode('+221 ')">Sénégal +221</a>
+                      <a href="#" onclick="setPhoneCode('+381 ')">Serbie +381</a>
+                      <a href="#" onclick="setPhoneCode('+248 ')">Seychelles +248</a>
+                      <a href="#" onclick="setPhoneCode('+232 ')">Sierra Leone +232</a>
+                      <a href="#" onclick="setPhoneCode('+65 ')">Singapour +65</a>
+                      <a href="#" onclick="setPhoneCode('+421 ')">Slovaquie +421</a>
+                      <a href="#" onclick="setPhoneCode('+386 ')">Slovénie +386</a>
+                      <a href="#" onclick="setPhoneCode('+252 ')">Somalie +252</a>
+                      <a href="#" onclick="setPhoneCode('+249 ')">Soudan +249</a>
+                      <a href="#" onclick="setPhoneCode('+211 ')">Soudan du Sud +211</a>
+                      <a href="#" onclick="setPhoneCode('+94 ')">Sri Lanka +94</a>
+                      <a href="#" onclick="setPhoneCode('+46 ')">Suède +46</a>
+                      <a href="#" onclick="setPhoneCode('+41 ')">Suisse +41</a>
+                      <a href="#" onclick="setPhoneCode('+597 ')">Suriname +597</a>
+                      <a href="#" onclick="setPhoneCode('+268 ')">Swaziland +268</a>
+                      <a href="#" onclick="setPhoneCode('+963 ')">Syrie +963</a>
+                      <a href="#" onclick="setPhoneCode('+992 ')">Tadjikistan +992</a>
+                      <a href="#" onclick="setPhoneCode('+255 ')">Tanzanie +255</a>
+                      <a href="#" onclick="setPhoneCode('+235 ')">Tchad +235</a>
+                      <a href="#" onclick="setPhoneCode('+66 ')">Thaïlande +66</a>
+                      <a href="#" onclick="setPhoneCode('+670 ')">Timor oriental +670</a>
+                      <a href="#" onclick="setPhoneCode('+228 ')">Togo +228</a>
+                      <a href="#" onclick="setPhoneCode('+676 ')">Tonga +676</a>
+                      <a href="#" onclick="setPhoneCode('+1-868 ')">Trinité-et-Tobago +1-868</a>
+                      <a href="#" onclick="setPhoneCode('+216 ')">Tunisie +216</a>
+                      <a href="#" onclick="setPhoneCode('+993 ')">Turkménistan +993</a>
+                      <a href="#" onclick="setPhoneCode('+90 ')">Turquie +90</a>
+                      <a href="#" onclick="setPhoneCode('+688 ')">Tuvalu +688</a>
+                      <a href="#" onclick="setPhoneCode('+380 ')">Ukraine +380</a>
+                      <a href="#" onclick="setPhoneCode('+598 ')">Uruguay +598</a>
+                      <a href="#" onclick="setPhoneCode('+678 ')">Vanuatu +678</a>
+                      <a href="#" onclick="setPhoneCode('+379 ')">Vatican +379</a>
+                      <a href="#" onclick="setPhoneCode('+58 ')">Venezuela +58</a>
+                      <a href="#" onclick="setPhoneCode('+84 ')">Viêt Nam +84</a>
+                      <a href="#" onclick="setPhoneCode('+967 ')">Yémen +967</a>
+                      <a href="#" onclick="setPhoneCode('+260 ')">Zambie +260</a>
+                      <a href="#" onclick="setPhoneCode('+263 ')">Zimbabwe +263</a>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
-              <label for="firstname">Nom Complet <span>*</span></label>
               <div class="name-fields">
-                <input type="text" name="firstname" placeholder="Prénom" required>
-                <input type="text" name="lastname" placeholder="Nom" required>
+                <div class="input-container">
+                  <label>Métier <span>*</span></label>
+                  <input type="text" placeholder="Informaticien" required>
+                </div>
+                <div class="input-container">
+                  <label for="lastname2">Ville <span>*</span></label>
+                  <input type="text" id="lastname2" name="lastname2" placeholder="Lausanne" required>
+                </div>
               </div>
             </div>
             <div class="form-group">
@@ -59,5 +277,31 @@
           </form>
         </div>
       </div>
+
+    <script>
+      function toggleDropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    return false; // Empêche la soumission du formulaire
+}
+
+function setPhoneCode(code) {
+    document.getElementById("phone").value = code;
+    document.getElementById("phone").focus(); // Permet de définir le focus sur le champ de saisie du numéro de téléphone
+    toggleDropdown();  // Ferme le menu déroulant après la sélection
+}
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+    </script>
 </body>
 </html>
