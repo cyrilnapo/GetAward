@@ -33,7 +33,7 @@ h2
 {
     border-radius: 100px;
    display: flex;
-   justify-content: center;
+   justify-content: space-between;
 }
 #menu
 {
@@ -45,6 +45,7 @@ h2
     border-radius: 100%;
     width: 30%;
     justify-content: center;
+    box-shadow: 0 8px 13px 0 rgba(85, 83, 83, 0.562), 0 6px 20px 0 rgba(121, 118, 118, 0.616);
 }
 .imge:hover
 {
@@ -141,9 +142,10 @@ h3
 .menu_wrapper{
   background-color: rgb(182, 154, 247);
   
-  height: 415px;
+  height: 280px;
   width: 90px;
-  
+  box-shadow: 0 8px 13px 0 rgba(85, 83, 83, 0.562), 0 6px 20px 0 rgba(121, 118, 118, 0.616);
+
   padding: 0;
   justify-content: center;
   border-radius: 40px;
@@ -164,19 +166,19 @@ h3
 }
 .menu_wrapper li a i{
   font-size: 32px;
-  color: #63cee9;
+  color: #f8f4fa;
   display: inline-block;
   transition: 0.8s;
   border-radius: 18px;
 }
 .menu_wrapper li :hover{
-  background-color: #313131;
-  transform: translateY(-5px);
+  background-color: #efafffa1;
+  transform: translateY(-2px);
   border-radius: 100px;
 }
 .menu_wrapper li :hover a i{
-  color: rgb(77, 189, 209);
-  transform: scale(0.5);
+  color: rgb(237, 179, 255);
+  transform: scale(0.2);
 }
 .menu_wrapper:hover{
   background-color: darkblue;
@@ -186,12 +188,12 @@ a {
   display: inline-block;
   color: white;
   text-align: center;
-  padding: 20px 0px;
+  
 }
 a,.dropbtn {
     
-  color: rgb(222, 224, 230);
+  color: rgb(181, 111, 238);
   text-align: right;
-  padding: 49px 49px;
+  padding: 39px 39px;
   text-decoration: none;
 }
