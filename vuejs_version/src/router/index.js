@@ -1,23 +1,40 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import TaskManager from '../views/TaskManager.vue'
 import UserProfile from '../components/UserProfile.vue'
 import UserLogin from '../components/UserLogin.vue'
 import UserSignup from '../components/UserSignup.vue'
 
-Vue.use(VueRouter)
-
 const routes = [
-  { path: '/', component: Home },
-  { path: '/tasks', component: TaskManager },
-  { path: '/profile', component: UserProfile },
-  { path: '/login', component: UserLogin },
-  { path: '/signup', component: UserSignup }
+  {
+    path: '/',
+    name: 'home',
+    component: Home
+  },
+  {
+    path: '/tasks',
+    name: 'task-manager',
+    component: TaskManager
+  },
+  {
+    path: '/profile',
+    name: 'user-profile',
+    component: UserProfile
+  },
+  {
+    path: '/login',
+    name: 'user-login',
+    component: UserLogin
+  },
+  {
+    path: '/signup',
+    name: 'user-signup',
+    component: UserSignup
+  }
 ]
 
-const router = new VueRouter({
-  mode: 'history',
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
 
