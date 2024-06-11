@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -109,7 +110,6 @@ nav a:hover {
   justify-content: space-between;
   align-items: center;
   padding: 0.5% 0;
-  margin: 0 3%;
 }
 .app {
   display: flex;
@@ -121,7 +121,6 @@ nav a:hover {
   background: linear-gradient(90deg, #ab96ff 0%, #ff8ac8 50%, #ffb18a 100%);
   width: 100%;
   text-align: center;
-  margin: 0;
 }
 .contact {
   display: flex;
@@ -164,4 +163,110 @@ footer a:hover {
 }
 .sec3:hover {
   transform: scale(1.05);
+}
+.contact button {
+  color: #3c3069;
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
+  font-family: "Times New Roman", Times, serif;
+  cursor: pointer;
+}
+.contact button:hover {
+  transform: scale(1.2);
+}
+
+/* Calendar */
+#calendar-section {
+  transition-duration: calc(2);
+  display: none;
+  justify-content: end;
+}
+.wrapper {
+  transition-duration: calc(2);
+  width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+.wrapper .path-calendar {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+.path-calendar .icons {
+  display: flex;
+}
+.path-calendar .icons span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+.icons span:last-child {
+  margin-right: -10px;
+}
+.path-calendar .icons span:hover {
+  background: #f2f2f2;
+}
+.path-calendar .current-date {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.calendar {
+  padding: 20px;
+}
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days {
+  margin-bottom: 20px;
+}
+.calendar li {
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar .weeks li {
+  font-weight: 500;
+  cursor: default;
+}
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+.days li.inactive {
+  color: #aaa;
+}
+.days li.active {
+  color: #fff;
+}
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before {
+  background: #9b59b6;
+}
+.days li:not(.active):hover::before {
+  background: #f2f2f2;
 }
