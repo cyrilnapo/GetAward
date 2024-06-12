@@ -2,7 +2,6 @@ import axios from 'axios'
 
 const apiClient = axios.create({
   baseURL: 'http://localhost:3000/',
-  withCredentials: true,
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
@@ -26,5 +25,8 @@ export default {
   },
   deleteNote(id) {
     return apiClient.delete('/api/notes/' + id)
+  },
+  signup(body) {
+    return apiClient.post('/api/signup/' + body)
   }
 }

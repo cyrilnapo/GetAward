@@ -21,6 +21,8 @@
 
 <script>
 import axios from 'axios'
+import service from '../services/NoteService'
+
 
 export default {
   data() {
@@ -32,8 +34,8 @@ export default {
   },
   methods: {
     signup() {
-      axios
-        .post('/api/signup', {
+      service
+        .signup({
           username: this.username,
           password: this.password,
           email: this.email
