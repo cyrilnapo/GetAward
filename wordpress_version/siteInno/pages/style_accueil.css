@@ -177,17 +177,18 @@ footer a:hover {
 }
 
 /* Calendar */
-#calendar-section {
-  transition-duration: calc(2);
-  display: none;
-  justify-content: end;
-}
 .wrapper {
   transition-duration: calc(2);
   width: 400px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  position: absolute;
+  left: 75%;
+  z-index: 2;
+}
+#calendar-section {
+  display: none;
 }
 .wrapper .path-calendar {
   display: flex;
