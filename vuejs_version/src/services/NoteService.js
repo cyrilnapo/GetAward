@@ -2,13 +2,12 @@ import axios from 'axios'
 
 const apiClient = axios.create({
   baseURL: 'http://localhost:3000/',
+  withCredentials: false,
   headers: {
     Accept: 'application/json',
-    'Content-Type': 'application/json',
-    Authorization:
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDczNzc2NjksImV4cCI6MTczODkzNTI2OX0.TFfSqdT9M2QqJxqgLROuXFIbTfBtYV8B2Vl4Gmeb7EI'
+    'Content-Type': 'application/json'
   }
-})
+});
 
 export default {
   getNotes() {
@@ -26,7 +25,10 @@ export default {
   deleteNote(id) {
     return apiClient.delete('/api/notes/' + id)
   },
-  signup(body) {
-    return apiClient.post('/api/signup/' + body)
+  signupUser(info){
+    return apiClient.post('/api/signup', info)
+  },
+  login(username, password) {
+    return apiClient.post('/api/login/', { username, password })
   }
 }

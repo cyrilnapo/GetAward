@@ -20,8 +20,13 @@ exports.loginUser = (req, res) => {
 
 exports.signupUser = (req, res) => {
   const userData = req.body;
+  console.log('Received signup request with data:', userData);
   userModel.saveUser(userData, (err, result) => {
-    if (err) return res.status(500).send(err);
+    if (err) {
+      console.error('Error saving user:', err);
+      return res.status(500).send(err);
+    }
     res.send('User signed up successfully');
   });
 };
+

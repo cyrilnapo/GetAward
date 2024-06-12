@@ -35,7 +35,7 @@ export default {
   methods: {
     signup() {
       service
-        .signup({
+        .signupUser({
           username: this.username,
           password: this.password,
           email: this.email
