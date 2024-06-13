@@ -16,29 +16,28 @@
 </template>
 
 <script>
-import axios from 'axios'
+import { ref } from 'vue'
+import service from '../services/NoteService'
 
 export default {
-  data() {
-    return {
-      username: '',
-      password: ''
-    }
-  },
-  methods: {
-    login() {
-      axios
-        .post('/api/login', {
-          username: this.username,
-          password: this.password
-        })
+  setup() {
+    const username = ref('')
+    const password = ref('')
+
+    const login = () => {
+      service.login(username.value, password.value)
         .then((response) => {
-          console.log('Login successful')
-          this.$router.push('/profile')
+          console.log('reussi')
         })
         .catch((error) => {
-          console.error('Login failed:', error)
+          console.log('erreur')
         })
+    }
+
+    return {
+      username,
+      password,
+      login
     }
   }
 }
