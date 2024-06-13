@@ -5,12 +5,15 @@
     color: white;
   }
 
-
+#pts
+{
+  padding-right: 200px;
+}
 
 body
 {
        margin: 0%;
-       padding: 25px;
+       
        background-color: white;
        color: black;
        font-size: 25px;
@@ -44,12 +47,12 @@ h2
 {
     border-radius: 100%;
     width: 30%;
-    justify-content: center;
-    box-shadow: 0 8px 13px 0 rgba(85, 83, 83, 0.562), 0 6px 20px 0 rgba(121, 118, 118, 0.616);
+    box-shadow: 0 8px 13px 0 rgba(54, 54, 54, 0.747), 0 6px 20px 0 rgba(226, 224, 224, 0.719);
+    margin-left: 300px;
 }
 .imge:hover
 {
-opacity: 0.7;
+opacity: 0.5;
 }
 h3
 {
@@ -66,10 +69,12 @@ h3
   }
   nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1% 0;
-    margin: 0 3%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5% 0;
+  margin: 0;
+  background-color: #cff9ffa1;
+
   }
   .nav-contain {
     display: flex;
@@ -80,7 +85,7 @@ h3
     display: flex;
     align-items: center;
     font-size: 1.5em;
-    gap: 3em;
+    
   }
   .bouton1 {
     border: solid 3px #ab96ff;
