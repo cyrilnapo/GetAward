@@ -85,3 +85,33 @@ document.querySelector("#path-calendar").onclick = function () {
     document.querySelector("#calendar-section").style.display = "none";
   }
 };
+document.querySelector("#path-contact").onclick = function () {
+  if (
+    window.getComputedStyle(document.querySelector("#section-contact"))
+      .display == "none"
+  ) {
+    document.querySelector("#section-contact").style.display = "flex";
+  } else {
+    document.querySelector("#section-contact").style.display = "none";
+  }
+};
+document.querySelector("#path-fermer-calendar").onclick = function () {
+  if (
+    window.getComputedStyle(document.querySelector("#calendar-section"))
+      .display == "none"
+  ) {
+    document.querySelector("#calendar-section").style.display = "flex";
+  } else {
+    document.querySelector("#calendar-section").style.display = "none";
+  }
+};
+document.querySelector("#path-fermer-contact").onclick = function () {
+  if (
+    window.getComputedStyle(document.querySelector("#section-contact"))
+      .display == "none"
+  ) {
+    document.querySelector("#section-contact").style.display = "flex";
+  } else {
+    document.querySelector("#section-contact").style.display = "none";
+  }
+};
