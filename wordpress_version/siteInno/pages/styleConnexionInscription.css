@@ -116,8 +116,15 @@ nav {
   gap: 3em;
 }
 
+nav a:hover {
+  transform: scale(1.2);
+}
 nav a {
   text-decoration: none;
+  color: #7157d8;
+}
+nav a:visited{
+  color: #7157d8;
 }
 
 .bouton2 {
@@ -136,10 +143,6 @@ nav a {
 .bouton3:hover {
   opacity: 0.7;
   transform: scale(0.9);
-}
-
-nav a:hover {
-  transform: scale(1.2);
 }
 
 /* Dropdown Button */

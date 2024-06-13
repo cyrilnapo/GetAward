@@ -89,9 +89,6 @@ h3
     font-size: 1.5em;
     
   }
-  nav a {
-    text-decoration: none;
-  }
   .bouton1 {
     border: solid 3px #ab96ff;
     border-radius: 10px;
@@ -119,6 +116,13 @@ h3
   }
   nav a:hover {
     transform: scale(1.2);
+  }
+  nav a {
+    text-decoration: none;
+    color: #7157d8;
+  }
+  nav a:visited{
+    color: #7157d8;
   }
   #info1
   {
