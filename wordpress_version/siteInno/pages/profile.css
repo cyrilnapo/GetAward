@@ -17,6 +17,7 @@ body
        background-color: white;
        color: black;
        font-size: 25px;
+       
 }
 
 h1
@@ -73,13 +74,14 @@ h3
   align-items: center;
   padding: 0.5% 0;
   margin: 0;
-  background-color: #cff9ffa1;
+  background-color: #a2f0fca1;
 
   }
   .nav-contain {
     display: flex;
     align-items: center;
-    gap: 15em;
+   flex-wrap: wrap;
+    gap: 5em;
   }
   .bouton-container {
     display: flex;
@@ -182,7 +184,7 @@ h3
   border-radius: 100px;
 }
 .menu_wrapper li :hover a i{
-  color: rgb(237, 179, 255);
+  color: rgb(117, 26, 145);
   transform: scale(0.2);
 }
 .menu_wrapper:hover{
@@ -194,6 +196,7 @@ a {
   color: white;
   text-align: center;
   
+  
 }
 a,.dropbtn {
     
@@ -201,4 +204,14 @@ a,.dropbtn {
   text-align: right;
   padding: 39px 39px;
   text-decoration: none;
+}
+@media (max-width: 600px) {
+  .container {
+      flex-direction: column;
+  }
+
+  .box {
+      flex: 1 1 100%;
+      margin: 5px 0;
+  }
 }

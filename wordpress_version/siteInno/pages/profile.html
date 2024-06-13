@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="JS_profile.js">
     <link rel="shortcut icon" href="../images/Trophee.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+      <script src="Calendrier.js" defer></script>
 </head>
 <body>
     <header>
@@ -24,8 +27,8 @@
                     <a href="Recompenses.html">Récompenses</a>
                   </div>
                   <div class="bouton-container">
-                    <a href=""><div class="bouton1">Connexion</div></a>
-                    <a href=""><div class="bouton2">S'inscrire</div></a>
+                    <a href="Connexion.html"><div class="bouton1">Connexion</div></a>
+                    <a href="Inscription.html"><div class="bouton2">S'inscrire</div></a>
                     <a href="">
                       <img src="../images/Profile.png" width="70" />
                       <div class="bouton3"></div>
@@ -77,7 +80,103 @@
     </main>
     <footer>
         <section> 
-
+          <div class="paragraphe">
+            <section id="calendar-section">
+              <div class="wrapper">
+                <header class="path-calendar">
+                  <p class="current-date"></p>
+                  <div class="icons">
+                    <span id="prev" class="material-symbols-rounded"
+                      >chevron_left</span
+                    >
+                    <span id="next" class="material-symbols-rounded"
+                      >chevron_right</span
+                    >
+                  </div>
+                  <a class="fermer-bouton" id="path-fermer-calendar">
+                    <img
+                      class="fermer-img"
+                      src="../images/fermer.png"
+                      alt="croix"
+                    />
+                  </a>
+                </header>
+                <div class="calendar">
+                  <ul class="weeks">
+                    <li>Dim</li>
+                    <li>Lun</li>
+                    <li>Mar</li>
+                    <li>Mer</li>
+                    <li>Jeu</li>
+                    <li>Ven</li>
+                    <li>Sam</li>
+                  </ul>
+                  <ul class="days"></ul>
+                </div>
+              </div>
+            </section>
+            <div class="trois-sec">
+              <section class="sec1"><p>Agenda</p></section>
+              <section class="sec2"><p>Tâches</p></section>
+              <section class="sec3"><p>Récompenses</p></section>
+            </div>
+            <section id="section-contact">
+              <form>
+                <div class="title-container">
+                  <h1>Contactez-nous</h1>
+                  <a class="fermer-bouton" id="path-fermer-contact">
+                    <img
+                      class="fermer-img"
+                      src="../images/fermer.png"
+                      alt="croix"
+                    />
+                  </a>
+                </div>
+    
+                <div class="separation"></div>
+                <div class="corps-formulaire">
+                  <div class="gauche">
+                    <div class="groupe">
+                      <label>Votre Prénom</label>
+                      <input type="text" autocomplete="off" />
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <div class="groupe">
+                      <label>Votre adresse e-mail</label>
+                      <input type="text" autocomplete="off" />
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="groupe">
+                      <label>Votre téléphone</label>
+                      <input type="text" autocomplete="off" />
+                      <i class="fas fa-mobile"></i>
+                    </div>
+                  </div>
+                  <div class="droite">
+                    <div class="groupe">
+                      <label>Message</label>
+                      <textarea placeholder="Saisissez ici..."></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="pied-formulaire" align="center">
+                  <button>Envoyer le message</button>
+                </div>
+              </form>
+            </section>
+          </div>
+        </main>
+        <footer class="contain-footer">
+          <div class="contact"><button id="path-contact">Contact</button></div>
+          <div class="app">
+            <a target="_blank" href="https://twitter.com/" class="lien-logo">
+              <img src="../images/twitter.png" alt="Logo Twitter" />
+            </a>
+            <a target="_blank" href="https://www.instagram.com/" class="lien-logo">
+              <img src="../images/instagram.png" alt="Logo Instagram" />
+            </a>
+          </div>
+          <div class="contact"><button id="path-calendar">Calendrier</button></div>
         </section>
     </footer>
 </body> 
