@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleTaches.css">
+    <title>Get Award - Tâches</title>
+    <link rel="shortcut icon" href="../images/Trophee.ico" type="image/x-icon">
+</head>
+<body>
+  <nav>
+    <a href="Accueil.html">
+      <img src="../images/logo1.png" height="107" width="200" />
+    </a>
+    <div class="nav-contain">
+      <div class="icon-bar">
+        <a href="Agenda.html">Agenda</a>
+        <a href="Taches.html">Tâches</a>
+        <a href="Recompenses.html">Récompenses</a>
+      </div>
+      <div class="bouton-container">
+        <a href="Connexion.html"><div class="bouton1">Connexion</div></a>
+        <a href="Inscription.html"><div class="bouton2">S'inscrire</div></a>
+        <a href="">
+          <div class="bouton3"></div>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="paragraphe">
+      <section id="calendar-section">
+        <div class="wrapper">
+          <header class="path-calendar">
+            <p class="current-date"></p>
+            <div class="icons">
+              <span id="prev" class="material-symbols-rounded"
+                >chevron_left</span
+              >
+              <span id="next" class="material-symbols-rounded"
+                >chevron_right</span
+              >
+            </div>
+            <a class="fermer-bouton" id="path-fermer-calendar">
+              <img
+                class="fermer-img"
+                src="../images/fermer.png"
+                alt="croix"
+              />
+            </a>
+          </header>
+          <div class="calendar">
+            <ul class="weeks">
+              <li>Dim</li>
+              <li>Lun</li>
+              <li>Mar</li>
+              <li>Mer</li>
+              <li>Jeu</li>
+              <li>Ven</li>
+              <li>Sam</li>
+            </ul>
+            <ul class="days"></ul>
+          </div>
+        </div>
+      </section>
+      <section id="section-contact">
+        <form>
+          <div class="title-container">
+            <h1>Contactez-nous</h1>
+            <a class="fermer-bouton" id="path-fermer-contact">
+              <img
+                class="fermer-img"
+                src="../images/fermer.png"
+                alt="croix"
+              />
+            </a>
+          </div>
+
+          <div class="separation"></div>
+          <div class="corps-formulaire">
+            <div class="gauche">
+              <div class="groupe">
+                <label>Votre Prénom</label>
+                <input type="text" autocomplete="off" />
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="groupe">
+                <label>Votre adresse e-mail</label>
+                <input type="text" autocomplete="off" />
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="groupe">
+                <label>Votre téléphone</label>
+                <input type="text" autocomplete="off" />
+                <i class="fas fa-mobile"></i>
+              </div>
+            </div>
+            <div class="droite">
+              <div class="groupe">
+                <label>Message</label>
+                <textarea placeholder="Saisissez ici..."></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="pied-formulaire" align="center">
+            <button>Envoyer le message</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer class="contain-footer">
+    <div class="contact"><button id="path-contact">Contact</button></div>
+    <div class="app">
+      <a target="_blank" href="https://twitter.com/" class="lien-logo">
+        <img src="../images/twitter.png" alt="Logo Twitter" />
+      </a>
+      <a target="_blank" href="https://www.instagram.com/" class="lien-logo">
+        <img src="../images/instagram.png" alt="Logo Instagram" />
+      </a>
+    </div>
+    <div class="contact"><button id="path-calendar">Calendrier</button></div>
+  </footer>
+</body>
+<script>
+  const daysTag = document.querySelector(".days"),
+  currentDate = document.querySelector(".current-date"),
+  prevNextIcon = document.querySelectorAll(".icons span");
+
+// getting new date, current year and month
+let date = new Date(),
+  currYear = date.getFullYear(),
+  currMonth = date.getMonth();
+
+// storing full name of all months in array
+const months = [
+  "Janvier",
+  "Février",
+  "Mars",
+  "Avril",
+  "Mai",
+  "Juin",
+  "Juillet",
+  "Août",
+  "Septembre",
+  "Octobre",
+  "Novembre",
+  "Décembre",
+];
+
+const renderCalendar = () => {
+  let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
+    lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
+    lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
+    lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
+  let liTag = "";
+
+  for (let i = firstDayofMonth; i > 0; i--) {
+    // creating li of previous month last days
+    liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+  }
+
+  for (let i = 1; i <= lastDateofMonth; i++) {
+    // creating li of all days of current month
+    // adding active class to li if the current day, month, and year matched
+    let isToday =
+      i === date.getDate() &&
+      currMonth === new Date().getMonth() &&
+      currYear === new Date().getFullYear()
+        ? "active"
+        : "";
+    liTag += `<li class="${isToday}">${i}</li>`;
+  }
+
+  for (let i = lastDayofMonth; i < 6; i++) {
+    // creating li of next month first days
+    liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`;
+  }
+  currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
+  daysTag.innerHTML = liTag;
+};
+renderCalendar();
+
+prevNextIcon.forEach((icon) => {
+  // getting prev and next icons
+  icon.addEventListener("click", () => {
+    // adding click event on both icons
+    // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
+    currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
+
+    if (currMonth < 0 || currMonth > 11) {
+      // if current month is less than 0 or greater than 11
+      // creating a new date of current year & month and pass it as date value
+      date = new Date(currYear, currMonth, new Date().getDate());
+      currYear = date.getFullYear(); // updating current year with new date year
+      currMonth = date.getMonth(); // updating current month with new date month
+    } else {
+      date = new Date(); // pass the current date as date value
+    }
+    renderCalendar(); // calling renderCalendar function
+  });
+});
+document.querySelector("#path-calendar").onclick = function () {
+  if (
+    window.getComputedStyle(document.querySelector("#calendar-section"))
+      .display == "none"
+  ) {
+    document.querySelector("#calendar-section").style.display = "flex";
+  } else {
+    document.querySelector("#calendar-section").style.display = "none";
+  }
+};
+document.querySelector("#path-contact").onclick = function () {
+  if (
+    window.getComputedStyle(document.querySelector("#section-contact"))
+      .display == "none"
+  ) {
+    document.querySelector("#section-contact").style.display = "flex";
+  } else {
+    document.querySelector("#section-contact").style.display = "none";
+  }
+};
+document.querySelector("#path-fermer-calendar").onclick = function () {
+  if (
+    window.getComputedStyle(document.querySelector("#calendar-section"))
+      .display == "none"
+  ) {
+    document.querySelector("#calendar-section").style.display = "flex";
+  } else {
+    document.querySelector("#calendar-section").style.display = "none";
+  }
+};
+document.querySelector("#path-fermer-contact").onclick = function () {
+  if (
+    window.getComputedStyle(document.querySelector("#section-contact"))
+      .display == "none"
+  ) {
+    document.querySelector("#section-contact").style.display = "flex";
+  } else {
+    document.querySelector("#section-contact").style.display = "none";
+  }
+};
+</script>
+</html>

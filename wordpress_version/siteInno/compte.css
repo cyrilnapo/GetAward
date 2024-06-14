@@ -1,120 +1,74 @@
-
-  
-  .dark-mode {
-    background-color: rgb(0, 0, 0);
-    color: white;
-  }
-
-#pts
-{
-  padding-right: 200px;
-}
-
-body
-{
-       margin: 0%;
-       
-       background-color: white;
-       color: black;
-       font-size: 25px;
-       width: 100%;
-}
-
-h1
-{
-    
-    text-align: center;
-    font-size: 4em ;
-    
-}
-h2
-{
-    
-    text-align: center;
-    font-size: 3em ;
-}
-.card
-{
-    border-radius: 100px;
-   display: flex;
-   justify-content: space-between;
-}
-#menu
-{
-  display: flex;
-  
-}
-.imge
-{
-    border-radius: 100%;
-    width: 30%;
-    box-shadow: 0 8px 13px 0 rgba(54, 54, 54, 0.747), 0 6px 20px 0 rgba(226, 224, 224, 0.719);
-    margin-left: 300px;
-}
-.imge:hover
-{
-opacity: 0.5;
-}
-h3
-{
-    text-align: center;
-    font-size: 2em;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 * {
-    transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
-  }
-  .icon-bar {
-    font-size: 1.5em;
-    display: flex;
-    gap: 4em;
-  }
-  nav {
-    display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0.3% 0;
+  padding: 0;
   margin: 0;
-  background-color: #a2f0fca1;
+  transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+}
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+  background-color: #ffffff;
+}
+.container {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background: linear-gradient(90deg, #ab96ff 0%, #ff8ac8 50%, #ffb18a 100%);
+  width: 100%;
+  text-align: center;
+}
+.icon-bar {
+  font-size: 1.5em;
+  display: flex;
+  gap: 4em;
+}
 
-  }
-  .nav-contain {
-    display: flex;
-    align-items: center;
-   flex-wrap: wrap;
-    gap: 5em;
-  }
-  .bouton-container {
-    display: flex;
-    align-items: center;
-    font-size: 1.5em;
-    
-  }
-  .bouton1 {
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 0;
+  margin: 0 3%;
+}
+
+.nav-contain {
+  display: flex;
+  align-items: center;
+  gap: 15em;
+}
+
+.bouton-container {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  gap: 3em;
+}
+.bouton1 {
     border: solid 3px #ab96ff;
     border-radius: 10px;
     padding: 0.3em 1em;
   }
-  .bouton2 {
-    background-color: #ab96ff;
-    border: solid 3px #ab96ff;
-    color: white;
-    border-radius: 10px;
-    padding: 0.3em 1em;
-  }
-  .bouton1:hover {
-    background-color: #ab96ffcb;
+.bouton2 {
+  background-color: #ab96ff;
+  border: solid 3px #ab96ff;
+  color: white;
+  border-radius: 10px;
+  padding: 0.3em 1em;
+}
+.bouton1:hover {
+    background-color: #ab96ff9c;
     transform: scale(0.9);
   }
-  .bouton2:hover {
-    opacity: 0.7;
-    transform: scale(0.9);
-   
-  }
-  .bouton3:hover {
-    opacity: 0.7;
-    transform: scale(0.9);
-  }
-  nav a:hover {
+.bouton2:hover {
+  opacity: 0.7;
+  transform: scale(0.9);
+}
+
+.bouton3:hover {
+  opacity: 0.7;
+  transform: scale(0.9);
+}
+nav a:hover {
     transform: scale(1.2);
   }
   nav a {
@@ -124,112 +78,46 @@ h3
   nav a:visited{
     color: #7157d8;
   }
-  #info1
-  {
-    border: 9px solid blanchedalmond;
-  }
-  #info2
-  {
-    border: 9px solid rgb(205, 218, 255);
-
-  }
-  p
-  {
-    font-size: 2em;
-  }
-  .info
-  {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 600px;
-  }
-  
-#form-container {
-  margin-bottom: 20px;
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10em;
+  gap: 3em;
 }
-
-
-
-.menu_wrapper{
-  background-color: rgb(182, 154, 247);
-  
-  height: 280px;
-  width: 90px;
-  box-shadow: 0 8px 13px 0 rgba(85, 83, 83, 0.562), 0 6px 20px 0 rgba(121, 118, 118, 0.616);
-
-  padding: 0;
-  justify-content: center;
-  border-radius: 40px;
-  pointer-events: none;
-  transition: 0.2s;
+.title {
+  font-size: 6em;
+  color: #7e67da;
 }
-.menu_wrapper li {
-  width: 90px ;
-  height: 85px;
-  border-radius: 90%;
+.intro p:hover {
+  transform: scale(1.2);
+}
+.intro a:hover {
+  transform: scale(1.2);
+}
+.intro a {
+  text-decoration: none;
+  background-color: #ab96ff;
+  border: solid 3px #ab96ff;
+  color: white;
+  border-radius: 10px;
+  padding: 0.9em 3em;
+  font-size: 1.5em;
+}
+.agenda {
+  width: 95%;
+  height: 75vh;
+  background-image: url(../images/agenda.webp);
+  background-size: cover;
+}
+.agenda-contain {
   display: flex;
   justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-  cursor: pointer;
-  pointer-events: auto;
-
+  box-shadow: black;
 }
-.menu_wrapper li a i{
-  font-size: 32px;
-  color: #f8f4fa;
-  display: inline-block;
-  transition: 0.8s;
-  border-radius: 18px;
+.paragraphe {
+  margin: 4em;
 }
-.menu_wrapper li :hover{
-  background-color: #efafffa1;
-  transform: translateY(-2px);
-  border-radius: 100px;
-}
-.menu_wrapper li :hover a i{
-  color: rgb(117, 26, 145);
-  transform: scale(0.2);
-}
-.menu_wrapper:hover{
-  background-color: rgb(3, 3, 112);
-}
-a {
-    
-  display: inline-block;
-  color: white;
-  text-align: center;
-  
-  
-}
-a,.dropbtn {
-    
-  color: rgb(181, 111, 238);
-  text-align: right;
-  padding: 39px 39px;
-  text-decoration: none;
-}
-@media (max-width: 600px) {
-  .container {
-      flex-direction: column;
-  }
-
-  .box {
-      flex: 1 1 100%;
-      margin: 5px 0;
-  }
-}
-
-
-#profile1
-{
-  color: #9b60df80;
-  border-radius: 100%;
-  
-}
-
-
-
 .contain-footer {
   display: flex;
   justify-content: space-between;
@@ -238,7 +126,7 @@ a,.dropbtn {
 }
 .app {
   display: flex;
-  gap: 1em;
+  gap: 3em;
 }
 .contain-footer {
   padding-top: 2px;
@@ -259,6 +147,35 @@ footer a {
 }
 footer a:hover {
   transform: scale(1.2);
+}
+.trois-sec {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.sec1 {
+  background-color: #ab96ff;
+  padding: 12em;
+  border-radius: 10%;
+}
+.sec2 {
+  background-color: #ab96ff;
+  padding: 12em;
+  border-radius: 10%;
+}
+.sec3 {
+  background-color: #ab96ff;
+  padding: 12em;
+  border-radius: 10%;
+}
+.sec1:hover {
+  transform: scale(1.05);
+}
+.sec2:hover {
+  transform: scale(1.05);
+}
+.sec3:hover {
+  transform: scale(1.05);
 }
 .contact button {
   color: #3c3069;
