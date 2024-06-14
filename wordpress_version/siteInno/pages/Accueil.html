@@ -20,7 +20,9 @@
           pour votre tavail de tous les jours.
         </p>
       </div>
+      
       <nav>
+        <div class="bouton3"></div>
         <a href="Accueil.html">
           <img src="../images/logo1.png" height="107" width="200" />
         </a>
@@ -34,6 +36,7 @@
             <a href="Connexion.html"><div class="bouton1">Connexion</div></a>
             <a href="Inscription.html"><div class="bouton2">S'inscrire</div></a>
             <a href="">
+              <a href="profile.html"><img src="../images/Profile.png" width="70" /></a>
               <div class="bouton3"></div>
             </a>
           </div>
@@ -41,15 +44,49 @@
       </nav>
     </header>
     <main>
-      <section class="intro">
-        <p class="title">GetAward</p>
-        <a href="">Commencer !</a>
-      </section>
-      <div class="agenda-contain">
-        <div class="agenda"></div>
-      </div>
-      <div class="paragraphe">
-        <section id="calendar-section">
+      <section class="contact-calendar-container">
+        <div id="section-contact">
+          <form>
+            <div class="title-container">
+              <h1>Contactez-nous</h1>
+              <a class="fermer-bouton" id="path-fermer-contact">
+                <img
+                  class="fermer-img"
+                  src="../images/fermer.png"
+                  alt="croix"
+                />
+              </a>
+            </div>
+
+            <div class="separation"></div>
+            <div class="corps-formulaire">
+              <div class="gauche">
+                <div class="groupe">
+                  <label>Votre Prénom</label>
+                  <input type="text" autocomplete="off" />
+                </div>
+                <div class="groupe">
+                  <label>Votre adresse e-mail</label>
+                  <input type="text" autocomplete="off" />
+                </div>
+                <div class="groupe">
+                  <label>Votre téléphone</label>
+                  <input type="text" autocomplete="off" />
+                </div>
+              </div>
+              <div class="droite">
+                <div class="groupe">
+                  <label>Message</label>
+                  <textarea placeholder="Saisissez ici..."></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="pied-formulaire" align="center">
+              <button>Envoyer le message</button>
+            </div>
+          </form>
+        </div>
+        <div id="calendar-section">
           <div class="wrapper">
             <header class="path-calendar">
               <p class="current-date"></p>
@@ -82,56 +119,42 @@
               <ul class="days"></ul>
             </div>
           </div>
-        </section>
-        <div class="trois-sec">
-          <section class="sec1"><p>Agenda</p></section>
-          <section class="sec2"><p>Tâches</p></section>
-          <section class="sec3"><p>Récompenses</p></section>
         </div>
-        <section id="section-contact">
-          <form>
-            <div class="title-container">
-              <h1>Contactez-nous</h1>
-              <a class="fermer-bouton" id="path-fermer-contact">
-                <img
-                  class="fermer-img"
-                  src="../images/fermer.png"
-                  alt="croix"
-                />
-              </a>
-            </div>
-
-            <div class="separation"></div>
-            <div class="corps-formulaire">
-              <div class="gauche">
-                <div class="groupe">
-                  <label>Votre Prénom</label>
-                  <input type="text" autocomplete="off" />
-                  <i class="fas fa-user"></i>
-                </div>
-                <div class="groupe">
-                  <label>Votre adresse e-mail</label>
-                  <input type="text" autocomplete="off" />
-                  <i class="fas fa-envelope"></i>
-                </div>
-                <div class="groupe">
-                  <label>Votre téléphone</label>
-                  <input type="text" autocomplete="off" />
-                  <i class="fas fa-mobile"></i>
-                </div>
-              </div>
-              <div class="droite">
-                <div class="groupe">
-                  <label>Message</label>
-                  <textarea placeholder="Saisissez ici..."></textarea>
-                </div>
-              </div>
-            </div>
-            <div class="pied-formulaire" align="center">
-              <button>Envoyer le message</button>
-            </div>
-          </form>
-        </section>
+      </section>
+      <section class="intro">
+        <p class="title">GetAward</p>
+        <a href="">Commencer !</a>
+      </section>
+      <div class="agenda-contain">
+        <div class="agenda"></div>
+      </div>
+      <div class="paragraphe">
+        <div class="trois-sec">
+          <section class="sec1">
+            <h1>Agenda</h1>
+            <p>
+              L'Agenda est mis à votre disposition pour avoir la possibilité d'agender vos tâches
+              avec leurs durées et leurs difficultées.
+            </p>
+          </section>
+          <section class="sec2">
+            <h1>Tâches</h1>
+            <p>
+              La page tâche sert à inscrire les tâches avec leurs durées et leurs effort à fournir
+              pour celles-ci.
+              Vous aurez donc la possibilité de les agender dans la page "Agenda".
+            </p>
+          </section>
+          <section class="sec3">
+            <h1>Récompenses</h1>
+            <p>
+              La page récompense consistera à recevoir des gains lorsque votre tâches est
+               accomplie avec succet et dans les temps. Suivant la difficulté un nombre 
+               de point vous serra donné puis grâce à ceci vous aurez la possibilité de 
+               choisir une récompense accessible à votre nombre de points.
+            </p>
+          </section>
+        </div>
       </div>
     </main>
     <footer class="contain-footer">

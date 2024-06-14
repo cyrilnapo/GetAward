@@ -24,24 +24,25 @@ body {
 }
 
 nav {
+  background-color: #dcfafc;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1% 0;
-  margin: 0 3%;
+  margin: 0 0.1%;
 }
 
 .nav-contain {
   display: flex;
   align-items: center;
-  gap: 15em;
+  gap: 13em;
 }
 
 .bouton-container {
   display: flex;
   align-items: center;
   font-size: 1.5em;
-  gap: 3em;
+  gap: 1em;
 }
 .bouton1 {
     border: solid 3px #ab96ff;
@@ -67,6 +68,9 @@ nav {
 .bouton3:hover {
   opacity: 0.7;
   transform: scale(0.9);
+}
+.paragraphe {
+  margin: 4em;
 }
 nav a:hover {
     transform: scale(1.2);
@@ -115,9 +119,6 @@ nav a:hover {
   justify-content: center;
   box-shadow: black;
 }
-.paragraphe {
-  margin: 4em;
-}
 .contain-footer {
   display: flex;
   justify-content: space-between;
@@ -151,22 +152,17 @@ footer a:hover {
 .trois-sec {
   display: flex;
   justify-content: space-around;
-  text-align: center;
 }
-.sec1 {
+.trois-sec section {
   background-color: #ab96ff;
-  padding: 12em;
-  border-radius: 10%;
-}
-.sec2 {
-  background-color: #ab96ff;
-  padding: 12em;
-  border-radius: 10%;
-}
-.sec3 {
-  background-color: #ab96ff;
-  padding: 12em;
-  border-radius: 10%;
+  width: 25%;
+  padding: 3%;
+  border-radius: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
 }
 .sec1:hover {
   transform: scale(1.05);
@@ -195,12 +191,13 @@ footer a:hover {
   width: 400px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-  position: absolute;
-  left: 75%;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.63);
   z-index: 2;
 }
 #calendar-section {
+  position: absolute;
+  top: 140%;
+  left: 76%;
   display: none;
 }
 .wrapper .path-calendar {
@@ -291,13 +288,14 @@ form {
   padding: 30px;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-  position: absolute;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.63);
   z-index: 2;
-  right: 70%;
-  top: 170%;
+  width: 28em;
 }
 #section-contact {
+  position: absolute;
+  top: 145%;
+  left: 2.5%;
   display: none;
 }
 .title-container {
@@ -323,7 +321,7 @@ form .separation {
 }
 form .corps-formulaire {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 30px;
 }
 form .corps-formulaire .groupe {
@@ -376,4 +374,7 @@ form .pied-formulaire button {
 }
 form .pied-formulaire button:hover {
   transform: scale(1.05);
+}
+i {
+  color: black;
 }
