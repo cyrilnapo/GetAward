@@ -305,3 +305,46 @@
   form .pied-formulaire button:hover {
     transform: scale(1.05);
   }
+
+
+  .calendar-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 colonnes pour les jours de la semaine */
+    gap: 1px; /* espace entre les cellules */
+    background-color: #9c9c9c; /* Couleur de l'espace entre les cellules */
+    border: 1px solid #9c9c9c;
+}
+
+.calendar-header {
+    grid-column: span 7; /* S'étend sur les 7 colonnes */
+    background-color: #d0e4fe;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.day-header {
+    background-color: #d0e4fe;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.day {
+    background-color: #fff;
+    min-height: 100px; /* Hauteur minimum des cellules */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.date {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.event {
+    font-size: 0.9em;
+}
