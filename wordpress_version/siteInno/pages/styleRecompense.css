@@ -1,65 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 * {
-    transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    height: 100vh;
-    margin: 0;
-    background-color: #ffffff;
-  }
-  .icon-bar {
-    font-size: 1.5em;
-    display: flex;
-    gap: 4em;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1% 0;
-    margin: 0 3%;
-  }
-  
-  .nav-contain {
-    display: flex;
-    align-items: center;
-    gap: 15em;
-  }
-  
-  .bouton-container {
-    display: flex;
-    align-items: center;
-    font-size: 1.5em;
-    gap: 3em;
-  }
-  .bouton1 {
-      border: solid 3px #ab96ff;
-      border-radius: 10px;
-      padding: 0.3em 1em;
-    }
-  .bouton2 {
-    background-color: #ab96ff;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+}
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+  background-color: #ffffff;
+}
+.container {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background: linear-gradient(90deg, #ab96ff 0%, #ff8ac8 50%, #ffb18a 100%);
+  width: 100%;
+  text-align: center;
+}
+.icon-bar {
+  font-size: 1.5em;
+  display: flex;
+  gap: 4em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 0;
+  margin: 0 3%;
+}
+
+.nav-contain {
+  display: flex;
+  align-items: center;
+  gap: 15em;
+}
+
+.bouton-container {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  gap: 3em;
+}
+.bouton1 {
     border: solid 3px #ab96ff;
-    color: white;
     border-radius: 10px;
     padding: 0.3em 1em;
   }
-  .bouton1:hover {
-      background-color: #ab96ff9c;
-      transform: scale(0.9);
-    }
-  .bouton2:hover {
-    opacity: 0.7;
+.bouton2 {
+  background-color: #ab96ff;
+  border: solid 3px #ab96ff;
+  color: white;
+  border-radius: 10px;
+  padding: 0.3em 1em;
+}
+.bouton1:hover {
+    background-color: #ab96ff9c;
     transform: scale(0.9);
   }
-  
-  .bouton3:hover {
-    opacity: 0.7;
-    transform: scale(0.9);
-  }
-  nav a:hover {
+.bouton2:hover {
+  opacity: 0.7;
+  transform: scale(0.9);
+}
+
+.bouton3:hover {
+  opacity: 0.7;
+  transform: scale(0.9);
+}
+nav a:hover {
     transform: scale(1.2);
   }
   nav a {
@@ -69,243 +78,310 @@
   nav a:visited{
     color: #7157d8;
   }
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10em;
+  gap: 3em;
+}
+.title {
+  font-size: 6em;
+  color: #7e67da;
+}
+.intro p:hover {
+  transform: scale(1.2);
+}
+.intro a:hover {
+  transform: scale(1.2);
+}
+.intro a {
+  text-decoration: none;
+  background-color: #ab96ff;
+  border: solid 3px #ab96ff;
+  color: white;
+  border-radius: 10px;
+  padding: 0.9em 3em;
+  font-size: 1.5em;
+}
+.agenda {
+  width: 95%;
+  height: 75vh;
+  background-image: url(../images/agenda.webp);
+  background-size: cover;
+}
+.agenda-contain {
+  display: flex;
+  justify-content: center;
+  box-shadow: black;
+}
+.paragraphe {
+  margin: 4em;
+}
+.contain-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5% 0;
+}
+.app {
+  display: flex;
+  gap: 3em;
+}
+.contain-footer {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background: linear-gradient(90deg, #ab96ff 0%, #ff8ac8 50%, #ffb18a 100%);
+  width: 100%;
+  text-align: center;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  gap: 2em;
+  margin: 1%;
+}
+footer a {
+  text-decoration: none;
+}
+footer a:hover {
+  transform: scale(1.2);
+}
+.trois-sec {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.sec1 {
+  background-color: #ab96ff;
+  padding: 12em;
+  border-radius: 10%;
+}
+.sec2 {
+  background-color: #ab96ff;
+  padding: 12em;
+  border-radius: 10%;
+}
+.sec3 {
+  background-color: #ab96ff;
+  padding: 12em;
+  border-radius: 10%;
+}
+.sec1:hover {
+  transform: scale(1.05);
+}
+.sec2:hover {
+  transform: scale(1.05);
+}
+.sec3:hover {
+  transform: scale(1.05);
+}
+.contact button {
+  color: #3c3069;
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
+  font-family: "Times New Roman", Times, serif;
+  cursor: pointer;
+}
+.contact button:hover {
+  transform: scale(1.2);
+}
 
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/* Calendar */
+.wrapper {
+  transition-duration: calc(2);
+  width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  position: absolute;
+  left: 75%;
+  z-index: 2;
+}
+#calendar-section {
+  display: none;
+}
+.wrapper .path-calendar {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+.path-calendar .icons {
+  display: flex;
+}
+.path-calendar .icons span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+.icons span:last-child {
+  margin-right: -10px;
+}
+.path-calendar .icons span:hover {
+  background: #f2f2f2;
+}
+.path-calendar .current-date {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.calendar {
+  padding: 20px;
+}
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days {
+  margin-bottom: 20px;
+}
+.calendar li {
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar .weeks li {
+  font-weight: 500;
+  cursor: default;
+}
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+.days li.inactive {
+  color: #aaa;
+}
+.days li.active {
+  color: #fff;
+}
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before {
+  background: #9b59b6;
+}
+.days li:not(.active):hover::before {
+  background: #f2f2f2;
+}
 
-  .contain-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5% 0;
-  }
-  .app {
-    display: flex;
-    gap: 3em;
-  }
-  .contain-footer {
-    padding-top: 2px;
-    padding-bottom: 2px;
-    background: linear-gradient(90deg, #ab96ff 0%, #ff8ac8 50%, #ffb18a 100%);
-    width: 100%;
-    text-align: center;
-  }
-  .contact {
-    display: flex;
-    align-items: center;
-    font-size: 1.5em;
-    gap: 2em;
-    margin: 1%;
-  }
-  footer a {
-    text-decoration: none;
-  }
-  footer a:hover {
-    transform: scale(1.2);
-  }
-  .contact button {
-    color: #3c3069;
-    background-color: transparent;
-    border: none;
-    font-size: 1em;
-    font-family: "Times New Roman", Times, serif;
-    cursor: pointer;
-  }
-  .contact button:hover {
-    transform: scale(1.2);
-  }
-  
-  /* Calendar */
-  .wrapper {
-    transition-duration: calc(2);
-    width: 400px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-    position: absolute;
-    left: 75%;
-    z-index: 2;
-  }
-  #calendar-section {
-    display: none;
-  }
-  .wrapper .path-calendar {
-    display: flex;
-    align-items: center;
-    padding: 25px 30px 10px;
-    justify-content: space-between;
-  }
-  .path-calendar .icons {
-    display: flex;
-  }
-  .path-calendar .icons span {
-    height: 38px;
-    width: 38px;
-    margin: 0 1px;
-    cursor: pointer;
-    color: #878787;
-    text-align: center;
-    line-height: 38px;
-    font-size: 1.9rem;
-    user-select: none;
-    border-radius: 50%;
-  }
-  .icons span:last-child {
-    margin-right: -10px;
-  }
-  .path-calendar .icons span:hover {
-    background: #f2f2f2;
-  }
-  .path-calendar .current-date {
-    font-size: 1.45rem;
-    font-weight: 500;
-  }
-  .calendar {
-    padding: 20px;
-  }
-  .calendar ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    text-align: center;
-  }
-  .calendar .days {
-    margin-bottom: 20px;
-  }
-  .calendar li {
-    color: #333;
-    width: calc(100% / 7);
-    font-size: 1.07rem;
-  }
-  .calendar .weeks li {
-    font-weight: 500;
-    cursor: default;
-  }
-  .calendar .days li {
-    z-index: 1;
-    cursor: pointer;
-    position: relative;
-    margin-top: 30px;
-  }
-  .days li.inactive {
-    color: #aaa;
-  }
-  .days li.active {
-    color: #fff;
-  }
-  .days li::before {
-    position: absolute;
-    content: "";
-    left: 50%;
-    top: 50%;
-    height: 40px;
-    width: 40px;
-    z-index: -1;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .days li.active::before {
-    background: #9b59b6;
-  }
-  .days li:not(.active):hover::before {
-    background: #f2f2f2;
-  }
-  
-  /*Contact*/
-  
-  form {
-    padding: 30px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-    position: absolute;
-    z-index: 2;
-    right: 70%;
-    top: 170%;
-  }
-  #section-contact {
-    display: none;
-  }
-  .title-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  .fermer-img {
-    width: 100%;
-    cursor: pointer;
-  }
-  .fermer-bouton {
-    background-color: transparent;
-    width: 5%;
-    border: none;
-  }
-  form h1 {
-    font-size: 20px;
-  }
-  form .separation {
-    width: 100%;
-    height: 1px;
-    background-color: #747cdf;
-  }
-  form .corps-formulaire {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-  }
-  form .corps-formulaire .groupe {
-    position: relative; /* Pour mettre positionner l’élément dans le flux normal de la page */
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  form .corps-formulaire .gauche .groupe input {
-    margin-top: 5px;
-    padding: 10px 5px 10px 30px;
-    border: 1px solid #c9c9c9;
-    outline-color: #747cdf;
-    border-radius: 5px;
-  }
-  form .corps-formulaire .gauche .groupe i {
-    position: absolute; /* positionné par rapport à son parent le plus proche positionné */
-    left: 0;
-    top: 25px;
-    padding: 9px 8px;
-    color: #747cdf;
-  }
-  form .corps-formulaire .droite {
-    margin-left: 40px;
-  }
-  form .corps-formulaire .droite .groupe {
-    height: 100%;
-  }
-  form .corps-formulaire .droite .groupe textarea {
-    margin-top: 5px;
-    padding: 10px;
-    background-color: #f1f1f1;
-    border: 2px solid #747cdf;
-    outline: none;
-    border-radius: 5px;
-    resize: none;
-    height: 72%;
-  }
-  form .pied-formulaire button {
-    margin-top: 10px;
-    background-color: #747cdf;
-    color: white;
-    font-size: 15px;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
-    transition: transform 0.5s;
-  }
-  form .pied-formulaire button:hover {
-    transform: scale(1.05);
-  }
+/*Contact*/
+
+form {
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  position: absolute;
+  z-index: 2;
+  right: 70%;
+  top: 170%;
+}
+#section-contact {
+  display: none;
+}
+.title-container {
+  display: flex;
+  justify-content: space-between;
+}
+.fermer-img {
+  width: 100%;
+  cursor: pointer;
+}
+.fermer-bouton {
+  background-color: transparent;
+  width: 5%;
+  border: none;
+}
+form h1 {
+  font-size: 20px;
+}
+form .separation {
+  width: 100%;
+  height: 1px;
+  background-color: #747cdf;
+}
+form .corps-formulaire {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+form .corps-formulaire .groupe {
+  position: relative; /* Pour mettre positionner l’élément dans le flux normal de la page */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+form .corps-formulaire .gauche .groupe input {
+  margin-top: 5px;
+  padding: 10px 5px 10px 30px;
+  border: 1px solid #c9c9c9;
+  outline-color: #747cdf;
+  border-radius: 5px;
+}
+form .corps-formulaire .gauche .groupe i {
+  position: absolute; /* positionné par rapport à son parent le plus proche positionné */
+  left: 0;
+  top: 25px;
+  padding: 9px 8px;
+  color: #747cdf;
+}
+form .corps-formulaire .droite {
+  margin-left: 40px;
+}
+form .corps-formulaire .droite .groupe {
+  height: 100%;
+}
+form .corps-formulaire .droite .groupe textarea {
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 2px solid #747cdf;
+  outline: none;
+  border-radius: 5px;
+  resize: none;
+  height: 72%;
+}
+form .pied-formulaire button {
+  margin-top: 10px;
+  background-color: #747cdf;
+  color: white;
+  font-size: 15px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+form .pied-formulaire button:hover {
+  transform: scale(1.05);
+}
+
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr ; /* Définit les largeurs des colonnes */
+  grid-template-columns: 1fr 2fr 1fr; /* Définit les largeurs des colonnes */
   gap: 0; /* Pas d'espace entre les éléments de la grille */
 }
 
