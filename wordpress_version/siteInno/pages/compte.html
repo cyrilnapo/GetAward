@@ -33,93 +33,39 @@
     </div>
   </nav>
   <main>
+    <label for="language" data-fr="Langue:" data-en="Language:">Langue:</label>
+    <select id="language" name="language">
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+    </select>
+    <h1>COMPTE</h1>
     <div id="menu"> 
+      <section id="profile">
+        <h2 data-fr="Votre Profil" data-en="Your Profile">Votre Profil</h2>
+        
+        <div class="grid">
+            <div class="grid-item">Nom:</div>
+            <div class="grid-item">Jean Dupont</div>
+            <div class="grid-item">Email:</div>
+            <div class="grid-item">jean.dupont@example.com</div>
+            <div class="grid-item">Date de naissance:</div>
+            <div class="grid-item">01/01/1980</div>
+            <div class="grid-item">Adresse:</div>
+            <div class="grid-item">123 Rue Exemple, Paris, France</div>
+
+        </div>
+        <button data-fr="Modifier le profil" data-en="Edit Profile">Modifier le profil</button>
+
+    </section>
+  
       <ul class="menu_wrapper">
-        <li> <a href="profile.html"><i id="profile1" class="fa-solid fa-user"></i> </a></li>
-        <li> <a href="compte.html"> <i class="fa-solid fa-gears"></i></i></a></li>
+        <li> <a href="profile.html"><i  class="fa-solid fa-user"></i> </a></li>
+        <li> <a href="compte.html"> <i id="profile1" class="fa-solid fa-gears"></i></i></a></li>
         <li> <a href="Connexion.html"><i class="fa-solid fa-right-to-bracket"></i></a></li>
       </ul>
     </div>
-    <div class="paragraphe">
-      <section id="calendar-section">
-        <div class="wrapper">
-          <header class="path-calendar">
-            <p class="current-date"></p>
-            <div class="icons">
-              <span id="prev" class="material-symbols-rounded"
-                >chevron_left</span
-              >
-              <span id="next" class="material-symbols-rounded"
-                >chevron_right</span
-              >
-            </div>
-            <a class="fermer-bouton" id="path-fermer-calendar">
-              <img
-                class="fermer-img"
-                src="../images/fermer.png"
-                alt="croix"
-              />
-            </a>
-          </header>
-          <div class="calendar">
-            <ul class="weeks">
-              <li>Dim</li>
-              <li>Lun</li>
-              <li>Mar</li>
-              <li>Mer</li>
-              <li>Jeu</li>
-              <li>Ven</li>
-              <li>Sam</li>
-            </ul>
-            <ul class="days"></ul>
-          </div>
-        </div>
-      </section>
-      <section id="section-contact">
-        <form>
-          <div class="title-container">
-            <h1>Contactez-nous</h1>
-            <a class="fermer-bouton" id="path-fermer-contact">
-              <img
-                class="fermer-img"
-                src="../images/fermer.png"
-                alt="croix"
-              />
-            </a>
-          </div>
 
-          <div class="separation"></div>
-          <div class="corps-formulaire">
-            <div class="gauche">
-              <div class="groupe">
-                <label>Votre Prénom</label>
-                <input type="text" autocomplete="off" />
-                <i class="fas fa-user"></i>
-              </div>
-              <div class="groupe">
-                <label>Votre adresse e-mail</label>
-                <input type="text" autocomplete="off" />
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="groupe">
-                <label>Votre téléphone</label>
-                <input type="text" autocomplete="off" />
-                <i class="fas fa-mobile"></i>
-              </div>
-            </div>
-            <div class="droite">
-              <div class="groupe">
-                <label>Message</label>
-                <textarea placeholder="Saisissez ici..."></textarea>
-              </div>
-            </div>
-          </div>
-          <div class="pied-formulaire" align="center">
-            <button>Envoyer le message</button>
-          </div>
-        </form>
-      </section>
-    </div>
+    
   </main>
   <footer class="contain-footer">
     <div class="contact"><button id="path-contact">Contact</button></div>
