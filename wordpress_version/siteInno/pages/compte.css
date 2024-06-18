@@ -15,8 +15,7 @@ h1
   text-align: center;
 }
 button {
-  background-color: #333;
-  color: #fff;
+  background: linear-gradient(90deg, #ab96ff 0%, #ff8ac8 50%, #ffb18a 100%);  color: #fff;
   border: none;
   cursor: pointer;
   padding: 0.7em 1.5em;
@@ -25,13 +24,15 @@ button {
 .grid {
   display: grid;
   grid-template-columns: auto auto;
-  background-color: #2196F3;
-  padding: 10px;
+  background-color: #5eadeed3;
+  padding: 40px;
+   width: 70em;
+  
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
+  padding: 40px;
   font-size: 30px;
   text-align: center;
 }
@@ -407,13 +408,9 @@ form .pied-formulaire button:hover {
 
 .menu_wrapper{
   background-color: rgb(182, 154, 247);
-  
   height: 280px;
   width: 90px;
   box-shadow: 0 8px 13px 0 rgba(85, 83, 83, 0.562), 0 6px 20px 0 rgba(121, 118, 118, 0.616);
- 
-
-  
   padding: 0;
   justify-content: center;
   border-radius: 40px;
@@ -485,3 +482,14 @@ a,.dropbtn {
   
 }
 
+#profile
+{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#menu
+{
+  display: flex;
+  
+}
