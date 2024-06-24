@@ -10,6 +10,32 @@ body {
   margin: 0;
   background-color: #ffffff;
 }
+h1
+{
+  text-align: center;
+}
+button {
+  background: linear-gradient(90deg, #ab96ff 0%, #ff8ac8 50%, #ffb18a 100%);  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0.7em 1.5em;
+  margin-top: 1em;
+}
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #5eadeed3;
+  padding: 40px;
+   width: 70em;
+  
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  font-size: 30px;
+  text-align: center;
+}
 .container {
   padding-top: 2px;
   padding-bottom: 2px;
@@ -28,7 +54,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1% 0;
-  margin: 0 3%;
+  margin: 0;
+  background-color: #a2f0fca1;
+
 }
 
 .nav-contain {
@@ -287,16 +315,6 @@ footer a:hover {
 
 /*Contact*/
 
-form {
-  padding: 30px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-  position: absolute;
-  z-index: 2;
-  right: 70%;
-  top: 170%;
-}
 #section-contact {
   display: none;
 }
@@ -313,83 +331,18 @@ form {
   width: 5%;
   border: none;
 }
-form h1 {
-  font-size: 20px;
-}
-form .separation {
-  width: 100%;
-  height: 1px;
-  background-color: #747cdf;
-}
-form .corps-formulaire {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-}
-form .corps-formulaire .groupe {
-  position: relative; /* Pour mettre positionner l’élément dans le flux normal de la page */
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-}
-form .corps-formulaire .gauche .groupe input {
-  margin-top: 5px;
-  padding: 10px 5px 10px 30px;
-  border: 1px solid #c9c9c9;
-  outline-color: #747cdf;
-  border-radius: 5px;
-}
-form .corps-formulaire .gauche .groupe i {
-  position: absolute; /* positionné par rapport à son parent le plus proche positionné */
-  left: 0;
-  top: 25px;
-  padding: 9px 8px;
-  color: #747cdf;
-}
-form .corps-formulaire .droite {
-  margin-left: 40px;
-}
-form .corps-formulaire .droite .groupe {
-  height: 100%;
-}
-form .corps-formulaire .droite .groupe textarea {
-  margin-top: 5px;
-  padding: 10px;
-  background-color: #f1f1f1;
-  border: 2px solid #747cdf;
-  outline: none;
-  border-radius: 5px;
-  resize: none;
-  height: 72%;
-}
-form .pied-formulaire button {
-  margin-top: 10px;
-  background-color: #747cdf;
-  color: white;
-  font-size: 15px;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  outline: none;
-  cursor: pointer;
-  transition: transform 0.5s;
-}
-form .pied-formulaire button:hover {
-  transform: scale(1.05);
-}
 
 .menu_wrapper{
   background-color: rgb(182, 154, 247);
-  
   height: 280px;
   width: 90px;
   box-shadow: 0 8px 13px 0 rgba(85, 83, 83, 0.562), 0 6px 20px 0 rgba(121, 118, 118, 0.616);
-
   padding: 0;
   justify-content: center;
   border-radius: 40px;
   pointer-events: none;
   transition: 0.2s;
+  margin-right: 9em;
 }
 .menu_wrapper li {
   width: 90px ;
@@ -456,3 +409,46 @@ a,.dropbtn {
   
 }
 
+.profile
+{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.grid-item
+{
+  display: flex;
+  margin:40px;
+  flex-direction: column;
+  align-items: center;
+}
+#menu
+{
+  display: flex;
+  
+}
+.texte {
+  text-align: center;
+}
+
+#modifiable-text {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  margin-right: 10px;
+}
