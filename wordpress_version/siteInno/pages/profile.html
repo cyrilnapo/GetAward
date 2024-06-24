@@ -11,7 +11,6 @@
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-      <script src="Calendrier.js" defer></script>
 </head>
 <body>
     <header>
@@ -60,27 +59,105 @@
         </div>
         </div>
 
-        <h3 class="bouton1">daniel</h3>
+        <h3 class="bouton1">Daniel</h3>
       
-                  <div class="info">
+                  <div class="info-container">
                     
-            <div id="info1">
+            <div id="info">
               <h4>Information Obligatoire</h4>
-                <p>Nom:</p><br>
-                <p>Prénom:</p> <br> 
-                <p>Ville:</p> <br>   
-                <p> Metier:</p> <br>
-                <p>Numero de Téléphone:</p> <br>
+                <p>Nom:</p>
+                <div class="text-block">
+                  <p id="modifiable-text-1">Votre Nom </p>
+                  <form id="edit-form-1" style="display: none;">
+                      <input type="text" id="text-input-1" placeholder="Entrez le nouveau texte">
+                      <button type="submit">Sauvegarder</button>
+                  </form>
+                  <button id="edit-button-1">Modifier le texte</button>
+              </div><br>
+                <p>Prénom:</p>
+                <div class="text-block">
+                  <p id="modifiable-text-2">Votre Prénom</p>
+                  <form id="edit-form-2" style="display: none;">
+                      <input type="text" id="text-input-2" placeholder="Entrez le nouveau texte">
+                      <button type="submit">Sauvegarder</button>
+                  </form>
+                  <button id="edit-button-2">Modifier le texte</button>
+              </div> <br> 
+                <p>Ville:</p>
+                <div class="text-block">
+                  <p id="modifiable-text-3">Nom de la ville</p>
+                  <form id="edit-form-3" style="display: none;">
+                      <input type="text" id="text-input-3" placeholder="Entrez le nouveau texte">
+                      <button type="submit">Sauvegarder</button>
+                  </form>
+                  <button id="edit-button-3">Modifier le texte</button>
+              </div> <br>   
+                <p> Metier:</p> <div class="text-block">
+                  <p id="modifiable-text-4">Le nom du métier</p>
+                  <form id="edit-form-4" style="display: none;">
+                      <input type="text" id="text-input-4" placeholder="Entrez le nouveau texte">
+                      <button type="submit">Sauvegarder</button>
+                  </form>
+                  <button id="edit-button-4">Modifier le texte</button>
+              </div> <br>
+                <p>Numero de Téléphone:</p> <div class="text-block">
+                  <p id="modifiable-text-5">Vore Numèro de tél.</p>
+                  <form id="edit-form-5" style="display: none;">
+                      <input type="text" id="text-input-5" placeholder="Entrez le nouveau texte">
+                      <button type="submit">Sauvegarder</button>
+                  </form>
+                  <button id="edit-button-5">Modifier le texte</button>
+              </div> <br>
 
             </div>
 
-            <div id="info2">
+            <div id="info">
               <h5>Information Complémentaire</h5>
-              <p>Genre:</p> <br>
-              <p>Nationnalité:</p> <br>
-              <p>Age:</p> <br>
-              <p>Adresse:</p> <br>
-              <p>Npa:</p> <br>
+              <p>Genre:</p>
+              <div class="text-block">
+                <p id="modifiable-text-6">Votre Genre </p>
+                <form id="edit-form-6" style="display: none;">
+                    <input type="text" id="text-input-6" placeholder="Entrez le nouveau texte">
+                    <button type="submit">Sauvegarder</button>
+                </form>
+                <button id="edit-button-6">Modifier le texte</button>
+            </div><br>
+            <p>Nationnalité:</p>
+            <div class="text-block">
+              <p id="modifiable-text-7">Votre Nationnalité</p>
+              <form id="edit-form-7" style="display: none;">
+                  <input type="text" id="text-input-7" placeholder="Entrez le nouveau texte">
+                  <button type="submit">Sauvegarder</button>
+              </form>
+              <button id="edit-button-7">Modifier le texte</button>
+            </div><br>
+            <p>Age:</p>
+            <div class="text-block">
+              <p id="modifiable-text-8">Votre Age </p>
+              <form id="edit-form-8" style="display: none;">
+                  <input type="text" id="text-input-8" placeholder="Entrez le nouveau texte">
+                  <button type="submit">Sauvegarder</button>
+              </form>
+              <button id="edit-button-8">Modifier le texte</button>
+          </div><br>
+          <p>Adresse:</p>
+          <div class="text-block">
+            <p id="modifiable-text-9">Votre adresse </p>
+            <form id="edit-form-9" style="display: none;">
+                <input type="text" id="text-input-9" placeholder="Entrez le nouveau texte">
+                <button type="submit">Sauvegarder</button>
+            </form>
+            <button id="edit-button-9">Modifier le texte</button>
+        </div><br>
+        <p>Npa:</p>
+        <div class="text-block">
+          <p id="modifiable-text-10">Votre Npa </p>
+          <form id="edit-form-10" style="display: none;">
+              <input type="text" id="text-input-10" placeholder="Entrez le nouveau texte">
+              <button type="submit">Sauvegarder</button>
+          </form>
+          <button id="edit-button-10">Modifier le texte</button>
+      </div><br>
 
             </div>
         </div>
@@ -99,131 +176,9 @@
       </div>
       <div class="contact"><button id="path-calendar">Calendrier</button></div>
     </footer>
-</body> 
+    <script src="JS_profile.js"></script>
 
+</body> 
 </html>
-<script>
-    function myFunction() {
-       var element = document.body;
-       element.classList.toggle("dark-mode");
-    }
-    </script>
-    <script>
-      const daysTag = document.querySelector(".days"),
-      currentDate = document.querySelector(".current-date"),
-      prevNextIcon = document.querySelectorAll(".icons span");
+
     
-    // getting new date, current year and month
-    let date = new Date(),
-      currYear = date.getFullYear(),
-      currMonth = date.getMonth();
-    
-    // storing full name of all months in array
-    const months = [
-      "Janvier",
-      "Février",
-      "Mars",
-      "Avril",
-      "Mai",
-      "Juin",
-      "Juillet",
-      "Août",
-      "Septembre",
-      "Octobre",
-      "Novembre",
-      "Décembre",
-    ];
-    
-    const renderCalendar = () => {
-      let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
-        lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
-        lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
-        lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
-      let liTag = "";
-    
-      for (let i = firstDayofMonth; i > 0; i--) {
-        // creating li of previous month last days
-        liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
-      }
-    
-      for (let i = 1; i <= lastDateofMonth; i++) {
-        // creating li of all days of current month
-        // adding active class to li if the current day, month, and year matched
-        let isToday =
-          i === date.getDate() &&
-          currMonth === new Date().getMonth() &&
-          currYear === new Date().getFullYear()
-            ? "active"
-            : "";
-        liTag += `<li class="${isToday}">${i}</li>`;
-      }
-    
-      for (let i = lastDayofMonth; i < 6; i++) {
-        // creating li of next month first days
-        liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`;
-      }
-      currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
-      daysTag.innerHTML = liTag;
-    };
-    renderCalendar();
-    
-    prevNextIcon.forEach((icon) => {
-      // getting prev and next icons
-      icon.addEventListener("click", () => {
-        // adding click event on both icons
-        // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
-        currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
-    
-        if (currMonth < 0 || currMonth > 11) {
-          // if current month is less than 0 or greater than 11
-          // creating a new date of current year & month and pass it as date value
-          date = new Date(currYear, currMonth, new Date().getDate());
-          currYear = date.getFullYear(); // updating current year with new date year
-          currMonth = date.getMonth(); // updating current month with new date month
-        } else {
-          date = new Date(); // pass the current date as date value
-        }
-        renderCalendar(); // calling renderCalendar function
-      });
-    });
-    document.querySelector("#path-calendar").onclick = function () {
-      if (
-        window.getComputedStyle(document.querySelector("#calendar-section"))
-          .display == "none"
-      ) {
-        document.querySelector("#calendar-section").style.display = "flex";
-      } else {
-        document.querySelector("#calendar-section").style.display = "none";
-      }
-    };
-    document.querySelector("#path-contact").onclick = function () {
-      if (
-        window.getComputedStyle(document.querySelector("#section-contact"))
-          .display == "none"
-      ) {
-        document.querySelector("#section-contact").style.display = "flex";
-      } else {
-        document.querySelector("#section-contact").style.display = "none";
-      }
-    };
-    document.querySelector("#path-fermer-calendar").onclick = function () {
-      if (
-        window.getComputedStyle(document.querySelector("#calendar-section"))
-          .display == "none"
-      ) {
-        document.querySelector("#calendar-section").style.display = "flex";
-      } else {
-        document.querySelector("#calendar-section").style.display = "none";
-      }
-    };
-    document.querySelector("#path-fermer-contact").onclick = function () {
-      if (
-        window.getComputedStyle(document.querySelector("#section-contact"))
-          .display == "none"
-      ) {
-        document.querySelector("#section-contact").style.display = "flex";
-      } else {
-        document.querySelector("#section-contact").style.display = "none";
-      }
-    };
-    </script>
