@@ -29,7 +29,7 @@ h1
 {
     
     text-align: center;
-    font-size: 3em ;
+    font-size: 2.5em ;
     
 }
 h2
@@ -49,23 +49,14 @@ h3
     border-radius: 100px;
    display: flex;
    justify-content: space-between;
+   
 }
 #menu
 {
   display: flex;
   
 }
-.imge
-{
-    border-radius: 100%;
-    width: 30%;
-    box-shadow: 0 8px 13px 0 rgba(54, 54, 54, 0.747), 0 6px 20px 0 rgba(226, 224, 224, 0.719);
-    margin-left: 300px;
-}
-.imge:hover
-{
-opacity: 0.5;
-}
+
 * {
     transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
   }
@@ -80,7 +71,9 @@ opacity: 0.5;
   align-items: center;
   padding: 0.3% 0;
   margin: 0;
-  background-color: #a2f0fca1;
+  background-color: #cef7fdf3;
+  height: 6em;
+  font-size: 0.7em;
 
   }
   .nav-contain {
@@ -132,7 +125,7 @@ opacity: 0.5;
   }
   #info1
   {
-    background: radial-gradient(rgb(166, 90, 209), rgb(248, 248, 250));   
+    background: rgb(161, 161, 161);   
      border-radius: 10px;
     box-shadow: 0 8px 13px 0 rgba(54, 54, 54, 0.747), 0 6px 20px 0 rgba(226, 224, 224, 0.719);
 
@@ -140,7 +133,7 @@ opacity: 0.5;
   }
   #info2
   {
-    background: radial-gradient(rgb(166, 90, 209), rgb(248, 248, 250));  
+    background: rgb(170, 170, 170);  
       border-radius: 10px;
     box-shadow: 0 8px 13px 0 rgba(54, 54, 54, 0.747), 0 6px 20px 0 rgba(226, 224, 224, 0.719);
 
@@ -468,4 +461,47 @@ form .pied-formulaire button {
 }
 form .pied-formulaire button:hover {
   transform: scale(1.05);
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(236, 234, 234);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 0.7em;
+ 
+}
+.pic img
+{
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  object-fit: cover;
+}
+.pic:hover .overlay  {
+  opacity: 1;
+}
+
+.pic
+{
+  
+  margin-left: 300px;
+  position: relative;
+  width: 300px;
+  height: 300px;
+
+}
+.imge
+{  
+  box-shadow: 10px 5px 5px 5px  #818181;
 }

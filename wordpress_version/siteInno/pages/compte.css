@@ -368,7 +368,6 @@ form .corps-formulaire .gauche .groupe input {
   border-radius: 5px;
 }
 form .corps-formulaire .gauche .groupe i {
-  position: absolute; /* positionné par rapport à son parent le plus proche positionné */
   left: 0;
   top: 25px;
   padding: 9px 8px;
@@ -416,6 +415,7 @@ form .pied-formulaire button:hover {
   border-radius: 40px;
   pointer-events: none;
   transition: 0.2s;
+  margin-right: 9em;
 }
 .menu_wrapper li {
   width: 90px ;
@@ -482,11 +482,18 @@ a,.dropbtn {
   
 }
 
-#profile
+.profile
 {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+.grid-item
+{
+  display: flex;
+  margin:40px;
+  flex-direction: column;
+  align-items: center;
 }
 #menu
 {
