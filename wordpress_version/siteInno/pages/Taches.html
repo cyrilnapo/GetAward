@@ -28,7 +28,6 @@
     </div>
   </nav>
   <main>
-
     <div class="grid-container">
       <!-- En-têtes de colonnes -->
       <div class="grid-header">n° Tâches</div>
@@ -38,45 +37,42 @@
 
       <!-- Contenu de la grille -->
       <div class="grid-item">1</div>
-      <div class="grid-item">Tâche 1</div>
-      <div class="grid-item">Facile</div>
-      <div class="grid-item">10 pts</div>
+      <div class="grid-item"><input type="text" value="Tâche 1"></div>
+      <div class="grid-item">
+        <select class="difficulty-select">
+          <option value=""></option>
+          <option value="Facile">Facile</option>
+          <option value="Moyen">Moyen</option>
+          <option value="Difficile">Difficile</option>
+        </select>
+      </div>
+      <div class="grid-item points"> pts</div>
+      
       <div class="grid-item">2</div>
-      <div class="grid-item">Tâche 2</div>
-      <div class="grid-item">Moyen</div>
-      <div class="grid-item">20 pts</div>
+      <div class="grid-item"><input type="text" value="Tâche 2"></div>
+      <div class="grid-item">
+        <select class="difficulty-select">
+          <option value=""></option>
+          <option value="Facile">Facile</option>
+          <option value="Moyen">Moyen</option>
+          <option value="Difficile">Difficile</option>
+        </select>
+      </div>
+      <div class="grid-item points"> pts</div>
+      
       <div class="grid-item">3</div>
-      <div class="grid-item">Tâche 3</div>
-      <div class="grid-item">Difficile</div>
-      <div class="grid-item">30 pts</div>
-      <div class="grid-item">4</div>
-      <div class="grid-item">Tâche 4</div>
-      <div class="grid-item">Facile</div>
-      <div class="grid-item">10 pts</div>
-      <div class="grid-item">5</div>
-      <div class="grid-item">Tâche 5</div>
-      <div class="grid-item">Moyen</div>
-      <div class="grid-item">20 pts</div>
-      <div class="grid-item">6</div>
-      <div class="grid-item">Tâche 6</div>
-      <div class="grid-item">Difficile</div>
-      <div class="grid-item">30 pts</div>
-      <div class="grid-item">7</div>
-      <div class="grid-item">Tâche 7</div>
-      <div class="grid-item">Facile</div>
-      <div class="grid-item">10 pts</div>
-      <div class="grid-item">8</div>
-      <div class="grid-item">Tâche 8</div>
-      <div class="grid-item">Moyen</div>
-      <div class="grid-item">20 pts</div>
-      <div class="grid-item">9</div>
-      <div class="grid-item">Tâche 9</div>
-      <div class="grid-item">Difficile</div>
-      <div class="grid-item">30 pts</div>
-      <div class="grid-item">10</div>
-      <div class="grid-item">Tâche 10</div>
-      <div class="grid-item">Difficile</div>
-      <div class="grid-item">30 pts</div>
+      <div class="grid-item"><input type="text" value="Tâche 3"></div>
+      <div class="grid-item">
+        <select class="difficulty-select">
+          <option value=""></option>
+          <option value="Facile">Facile</option>
+          <option value="Moyen">Moyen</option>
+          <option value="Difficile">Difficile</option>
+        </select>
+      </div>
+      <div class="grid-item points"> pts</div>
+      
+      <!-- Ajoutez des lignes supplémentaires ici de la même manière -->
     </div>
 
     <div class="paragraphe">
@@ -85,19 +81,11 @@
           <header class="path-calendar">
             <p class="current-date"></p>
             <div class="icons">
-              <span id="prev" class="material-symbols-rounded"
-                >chevron_left</span
-              >
-              <span id="next" class="material-symbols-rounded"
-                >chevron_right</span
-              >
+              <span id="prev" class="material-symbols-rounded">chevron_left</span>
+              <span id="next" class="material-symbols-rounded">chevron_right</span>
             </div>
             <a class="fermer-bouton" id="path-fermer-calendar">
-              <img
-                class="fermer-img"
-                src="../images/fermer.png"
-                alt="croix"
-              />
+              <img class="fermer-img" src="../images/fermer.png" alt="croix" />
             </a>
           </header>
           <div class="calendar">
@@ -119,14 +107,9 @@
           <div class="title-container">
             <h1>Contactez-nous</h1>
             <a class="fermer-bouton" id="path-fermer-contact">
-              <img
-                class="fermer-img"
-                src="../images/fermer.png"
-                alt="croix"
-              />
+              <img class="fermer-img" src="../images/fermer.png" alt="croix" />
             </a>
           </div>
-
           <div class="separation"></div>
           <div class="corps-formulaire">
             <div class="gauche">
@@ -235,7 +218,6 @@ renderCalendar();
 prevNextIcon.forEach((icon) => {
   // getting prev and next icons
   icon.addEventListener("click", () => {
-    // adding click event on both icons
     // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
     currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
 
@@ -251,45 +233,38 @@ prevNextIcon.forEach((icon) => {
     renderCalendar(); // calling renderCalendar function
   });
 });
-document.querySelector("#path-calendar").onclick = function () {
-  if (
-    window.getComputedStyle(document.querySelector("#calendar-section"))
-      .display == "none"
-  ) {
-    document.querySelector("#calendar-section").style.display = "flex";
-  } else {
-    document.querySelector("#calendar-section").style.display = "none";
-  }
+
+document.getElementById("path-calendar").addEventListener("click", () => {
+  document.getElementById("calendar-section").style.display = "block";
+});
+document.getElementById("path-contact").addEventListener("click", () => {
+  document.getElementById("section-contact").style.display = "block";
+});
+document
+  .getElementById("path-fermer-contact")
+  .addEventListener("click", () => {
+    document.getElementById("section-contact").style.display = "none";
+  });
+document
+  .getElementById("path-fermer-calendar")
+  .addEventListener("click", () => {
+    document.getElementById("calendar-section").style.display = "none";
+  });
+
+const difficultyPoints = {
+  "":0,
+  Facile: 10,
+  Moyen: 20,
+  Difficile: 30,
 };
-document.querySelector("#path-contact").onclick = function () {
-  if (
-    window.getComputedStyle(document.querySelector("#section-contact"))
-      .display == "none"
-  ) {
-    document.querySelector("#section-contact").style.display = "flex";
-  } else {
-    document.querySelector("#section-contact").style.display = "none";
-  }
-};
-document.querySelector("#path-fermer-calendar").onclick = function () {
-  if (
-    window.getComputedStyle(document.querySelector("#calendar-section"))
-      .display == "none"
-  ) {
-    document.querySelector("#calendar-section").style.display = "flex";
-  } else {
-    document.querySelector("#calendar-section").style.display = "none";
-  }
-};
-document.querySelector("#path-fermer-contact").onclick = function () {
-  if (
-    window.getComputedStyle(document.querySelector("#section-contact"))
-      .display == "none"
-  ) {
-    document.querySelector("#section-contact").style.display = "flex";
-  } else {
-    document.querySelector("#section-contact").style.display = "none";
-  }
-};
+
+document.querySelectorAll('.difficulty-select').forEach(select => {
+  select.addEventListener('change', (event) => {
+    const selectedDifficulty = event.target.value;
+    const pointsElement = event.target.parentElement.nextElementSibling;
+    const points = difficultyPoints[selectedDifficulty];
+    pointsElement.textContent = `${points} pts`;
+  });
+});
 </script>
 </html>
