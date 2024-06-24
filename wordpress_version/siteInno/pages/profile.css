@@ -125,7 +125,7 @@ h3
   }
   #info1
   {
-    background: radial-gradient(rgb(166, 90, 209), rgb(248, 248, 250));   
+    background: rgb(161, 161, 161);   
      border-radius: 10px;
     box-shadow: 0 8px 13px 0 rgba(54, 54, 54, 0.747), 0 6px 20px 0 rgba(226, 224, 224, 0.719);
 
@@ -133,7 +133,7 @@ h3
   }
   #info2
   {
-    background: radial-gradient(rgb(166, 90, 209), rgb(248, 248, 250));  
+    background: rgb(170, 170, 170);  
       border-radius: 10px;
     box-shadow: 0 8px 13px 0 rgba(54, 54, 54, 0.747), 0 6px 20px 0 rgba(226, 224, 224, 0.719);
 
@@ -479,6 +479,7 @@ form .pied-formulaire button:hover {
   opacity: 0;
   transition: opacity 0.3s ease;
   font-size: 0.7em;
+ 
 }
 .pic img
 {
@@ -494,7 +495,7 @@ form .pied-formulaire button:hover {
 .pic
 {
   
-  padding-left: 260px;
+  margin-left: 300px;
   position: relative;
   width: 300px;
   height: 300px;
