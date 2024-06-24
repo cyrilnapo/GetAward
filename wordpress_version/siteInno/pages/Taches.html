@@ -44,6 +44,7 @@
           <option value="Facile">Facile</option>
           <option value="Moyen">Moyen</option>
           <option value="Difficile">Difficile</option>
+          <option value="Expert">Expert</option>
         </select>
       </div>
       <div class="grid-item points"> pts</div>
@@ -56,6 +57,7 @@
           <option value="Facile">Facile</option>
           <option value="Moyen">Moyen</option>
           <option value="Difficile">Difficile</option>
+          <option value="Expert">Expert</option>
         </select>
       </div>
       <div class="grid-item points"> pts</div>
@@ -68,6 +70,7 @@
           <option value="Facile">Facile</option>
           <option value="Moyen">Moyen</option>
           <option value="Difficile">Difficile</option>
+          <option value="Expert">Expert</option>
         </select>
       </div>
       <div class="grid-item points"> pts</div>
@@ -252,10 +255,11 @@ document
   });
 
 const difficultyPoints = {
-  "":0,
+  "":"",
   Facile: 10,
   Moyen: 20,
   Difficile: 30,
+  Expert: 50
 };
 
 document.querySelectorAll('.difficulty-select').forEach(select => {
